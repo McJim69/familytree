@@ -1,0 +1,26 @@
+2024-02-28 5:59:33 - ERROR --> PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [104]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 require called at [C:\wamp\www\dmaatas\index.php:12]
+    #1 getInstance called at [C:\wamp\www\dmaatas\fcms.php:20]
+    #2 __construct called at [C:\wamp\www\dmaatas\inc\Database.php:76]
+    #3 connect called at [C:\wamp\www\dmaatas\inc\Database.php:62]
+    #4 __construct called at [C:\wamp\www\dmaatas\inc\Database.php:104]
+    #5 fcmsErrorHandler called at [???:???]
+
+ 
+2024-02-28 6:04:22 - ERROR --> PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [104]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 require called at [C:\wamp\www\dmaatas\admin\index.php:8]
+    #1 getInstance called at [C:\wamp\www\dmaatas\fcms.php:20]
+    #2 __construct called at [C:\wamp\www\dmaatas\inc\Database.php:76]
+    #3 connect called at [C:\wamp\www\dmaatas\inc\Database.php:62]
+    #4 __construct called at [C:\wamp\www\dmaatas\inc\Database.php:104]
+    #5 fcmsErrorHandler called at [???:???]
+
+ 

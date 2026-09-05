@@ -1,0 +1,1843 @@
+2025-09-26 13:27:48 - ERROR --> Could not connect to host [localhost] with user [McJim]. - PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1045] Access denied for user 'McJim'@'localhost' (using password: YES)
+    [string:Exception:private] => 
+    [code:protected] => 1045
+    [file:protected] => D:\Server\www\templates\familytree\inc\Database.php
+    [line:protected] => 81
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 81
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=localhost;dbname=maatas
+                            [1] => McJim
+                            [2] => McJim654123
+                            [3] => Array
+                                (
+                                    [12] => 1
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 39
+                    [function] => connect
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 53
+                    [function] => __construct
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\fcms.php
+                    [line] => 20
+                    [function] => getInstance
+                    [class] => Database
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\index.php
+                    [line] => 12
+                    [args] => Array
+                        (
+                            [0] => D:\Server\www\templates\familytree\fcms.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+    [xdebug_message] => <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[HY000] [1045] Access denied for user 'McJim'@'localhost' (using password: YES) in D:\Server\www\templates\familytree\inc\Database.php on line <i>81</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0013</td><td bgcolor='#eeeeec' align='right'>355672</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='D:\Server\www\templates\familytree\index.php' bgcolor='#eeeeec'>...\index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0023</td><td bgcolor='#eeeeec' align='right'>466216</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'D:\Server\www\templates\familytree\fcms.php'</font> )</td><td title='D:\Server\www\templates\familytree\index.php' bgcolor='#eeeeec'>...\index.php<b>:</b>12</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0107</td><td bgcolor='#eeeeec' align='right'>1675976</td><td bgcolor='#eeeeec'>Database::getInstance(  )</td><td title='D:\Server\www\templates\familytree\fcms.php' bgcolor='#eeeeec'>...\fcms.php<b>:</b>20</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0107</td><td bgcolor='#eeeeec' align='right'>1676880</td><td bgcolor='#eeeeec'>Database->__construct(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>53</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0107</td><td bgcolor='#eeeeec' align='right'>1677288</td><td bgcolor='#eeeeec'>Database->connect(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>39</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0107</td><td bgcolor='#eeeeec' align='right'>1678120</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDO.construct' target='_new'>__construct</a>
+(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>81</td></tr>
+
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [90]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 require called at [D:\Server\www\templates\familytree\index.php:12]
+    #1 getInstance called at [D:\Server\www\templates\familytree\fcms.php:20]
+    #2 __construct called at [D:\Server\www\templates\familytree\inc\Database.php:53]
+    #3 connect called at [D:\Server\www\templates\familytree\inc\Database.php:39]
+    #4 add called at [D:\Server\www\templates\familytree\inc\Database.php:91]
+
+ 
+2025-09-26 13:29:54 - ERROR --> Could not connect to host [localhost] with user [McJim]. - PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1049] Unknown database 'maatas'
+    [string:Exception:private] => 
+    [code:protected] => 1049
+    [file:protected] => D:\Server\www\templates\familytree\inc\Database.php
+    [line:protected] => 81
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 81
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=localhost;dbname=maatas
+                            [1] => McJim
+                            [2] => Restricted654123
+                            [3] => Array
+                                (
+                                    [12] => 1
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 39
+                    [function] => connect
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 53
+                    [function] => __construct
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\fcms.php
+                    [line] => 20
+                    [function] => getInstance
+                    [class] => Database
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\index.php
+                    [line] => 12
+                    [args] => Array
+                        (
+                            [0] => D:\Server\www\templates\familytree\fcms.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+    [xdebug_message] => <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[HY000] [1049] Unknown database 'maatas' in D:\Server\www\templates\familytree\inc\Database.php on line <i>81</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>355672</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='D:\Server\www\templates\familytree\index.php' bgcolor='#eeeeec'>...\index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0012</td><td bgcolor='#eeeeec' align='right'>466216</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'D:\Server\www\templates\familytree\fcms.php'</font> )</td><td title='D:\Server\www\templates\familytree\index.php' bgcolor='#eeeeec'>...\index.php<b>:</b>12</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0068</td><td bgcolor='#eeeeec' align='right'>1675968</td><td bgcolor='#eeeeec'>Database::getInstance(  )</td><td title='D:\Server\www\templates\familytree\fcms.php' bgcolor='#eeeeec'>...\fcms.php<b>:</b>20</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0068</td><td bgcolor='#eeeeec' align='right'>1676872</td><td bgcolor='#eeeeec'>Database->__construct(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>53</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0068</td><td bgcolor='#eeeeec' align='right'>1677288</td><td bgcolor='#eeeeec'>Database->connect(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>39</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0068</td><td bgcolor='#eeeeec' align='right'>1678120</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDO.construct' target='_new'>__construct</a>
+(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>81</td></tr>
+
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [90]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 require called at [D:\Server\www\templates\familytree\index.php:12]
+    #1 getInstance called at [D:\Server\www\templates\familytree\fcms.php:20]
+    #2 __construct called at [D:\Server\www\templates\familytree\inc\Database.php:53]
+    #3 connect called at [D:\Server\www\templates\familytree\inc\Database.php:39]
+    #4 add called at [D:\Server\www\templates\familytree\inc\Database.php:91]
+
+ 
+2025-09-26 13:30:55 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 handleFacebookLogin called at [D:\Server\www\templates\familytree\index.php:333]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:543]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:30:55 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayHeader called at [D:\Server\www\templates\familytree\index.php:335]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:303]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:30:55 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getSiteName called at [D:\Server\www\templates\familytree\index.php:346]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2167]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:30:55 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 isRegistrationOn called at [D:\Server\www\templates\familytree\index.php:410]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:3983]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:30:55 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:415]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:30:55 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:451]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:32:52 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_users' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `id`, `username`, `password`, `phpass`, `activated`, `locked` 
+            FROM `fcms_users` 
+            WHERE `username` = ?
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginSubmit called at [D:\Server\www\templates\familytree\index.php:42]
+    #2 getRow called at [D:\Server\www\templates\familytree\index.php:157]
+    #3 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #4 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:32:52 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'debug'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginSubmit called at [D:\Server\www\templates\familytree\index.php:42]
+    #2 displayError called at [D:\Server\www\templates\familytree\index.php:160]
+    #3 debugOn called at [D:\Server\www\templates\familytree\inc\Error.php:146]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2943]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:33:02 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 handleFacebookLogin called at [D:\Server\www\templates\familytree\index.php:333]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:543]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:33:02 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayHeader called at [D:\Server\www\templates\familytree\index.php:335]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:303]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:33:02 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getSiteName called at [D:\Server\www\templates\familytree\index.php:346]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2167]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:33:02 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 isRegistrationOn called at [D:\Server\www\templates\familytree\index.php:410]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:3983]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:33:02 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:415]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:33:02 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:451]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:11 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 handleFacebookLogin called at [D:\Server\www\templates\familytree\index.php:333]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:543]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:35:11 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayHeader called at [D:\Server\www\templates\familytree\index.php:335]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:303]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:11 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getSiteName called at [D:\Server\www\templates\familytree\index.php:346]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2167]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:11 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 isRegistrationOn called at [D:\Server\www\templates\familytree\index.php:410]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:3983]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:11 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:415]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:35:11 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:451]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:12 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_users' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `id`, `username`, `password`, `phpass`, `activated`, `locked` 
+            FROM `fcms_users` 
+            WHERE `username` = ?
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginSubmit called at [D:\Server\www\templates\familytree\index.php:42]
+    #2 getRow called at [D:\Server\www\templates\familytree\index.php:157]
+    #3 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #4 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:35:12 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'debug'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginSubmit called at [D:\Server\www\templates\familytree\index.php:42]
+    #2 displayError called at [D:\Server\www\templates\familytree\index.php:160]
+    #3 debugOn called at [D:\Server\www\templates\familytree\inc\Error.php:146]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2943]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:16 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 handleFacebookLogin called at [D:\Server\www\templates\familytree\index.php:333]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:543]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:35:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayHeader called at [D:\Server\www\templates\familytree\index.php:335]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:303]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getSiteName called at [D:\Server\www\templates\familytree\index.php:346]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2167]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 isRegistrationOn called at [D:\Server\www\templates\familytree\index.php:410]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:3983]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:35:16 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:415]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:35:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:451]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:36:17 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginError called at [D:\Server\www\templates\familytree\index.php:34]
+    #2 displayHeader called at [D:\Server\www\templates\familytree\index.php:106]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:303]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:36:17 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginError called at [D:\Server\www\templates\familytree\index.php:34]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:114]
+    #3 getSiteName called at [D:\Server\www\templates\familytree\index.php:346]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2167]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:36:17 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginError called at [D:\Server\www\templates\familytree\index.php:34]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:114]
+    #3 isRegistrationOn called at [D:\Server\www\templates\familytree\index.php:410]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:3983]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:36:17 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginError called at [D:\Server\www\templates\familytree\index.php:34]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:114]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:415]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:36:17 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginError called at [D:\Server\www\templates\familytree\index.php:34]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:114]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:451]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:40:12 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 getCurrentVersion called at [D:\Server\www\templates\familytree\lostpw.php:13]
+    #1 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #2 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #3 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:40:16 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 handleFacebookLogin called at [D:\Server\www\templates\familytree\index.php:333]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:543]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:40:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayHeader called at [D:\Server\www\templates\familytree\index.php:335]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:303]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:40:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getSiteName called at [D:\Server\www\templates\familytree\index.php:346]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2167]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:40:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 isRegistrationOn called at [D:\Server\www\templates\familytree\index.php:410]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:3983]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:40:16 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [284]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getFacebookConfigData called at [D:\Server\www\templates\familytree\index.php:415]
+    #4 getRows called at [D:\Server\www\templates\familytree\inc\socialmedia.php:13]
+    #5 add called at [D:\Server\www\templates\familytree\inc\Database.php:286]
+
+ 
+2025-09-26 13:40:16 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'familytree.fcms_config' doesn't exist
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [168]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [D:\Server\www\templates\familytree\index.php:18]
+    #1 displayLoginForm called at [D:\Server\www\templates\familytree\index.php:46]
+    #2 displayLogin called at [D:\Server\www\templates\familytree\index.php:336]
+    #3 getCurrentVersion called at [D:\Server\www\templates\familytree\index.php:451]
+    #4 getRow called at [D:\Server\www\templates\familytree\inc\utils.php:2190]
+    #5 getRowQuery called at [D:\Server\www\templates\familytree\inc\Database.php:144]
+    #6 add called at [D:\Server\www\templates\familytree\inc\Database.php:170]
+
+ 
+2025-09-26 13:49:55 - ERROR --> file(): php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server. 
+  FILE  - D:\Server\www\templates\familytree\admin\index.php [129]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\admin\index.php:24]
+    #1 control called at [D:\Server\www\templates\familytree\admin\index.php:57]
+    #2 displayDashboard called at [D:\Server\www\templates\familytree\admin\index.php:80]
+    #3 file called at [D:\Server\www\templates\familytree\admin\index.php:129]
+    #4 fcmsErrorHandler called at [???:???]
+
+ 
+2025-09-26 13:49:55 - ERROR --> file(http://www.familycms.com/latest/version.php): failed to open stream: php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server. 
+  FILE  - D:\Server\www\templates\familytree\admin\index.php [129]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\admin\index.php:24]
+    #1 control called at [D:\Server\www\templates\familytree\admin\index.php:57]
+    #2 displayDashboard called at [D:\Server\www\templates\familytree\admin\index.php:80]
+    #3 file called at [D:\Server\www\templates\familytree\admin\index.php:129]
+    #4 fcmsErrorHandler called at [???:???]
+
+ 
+2025-09-26 13:50:28 - ERROR --> Could not connect to host [localhost] with user [McJim]. - PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1045] Access denied for user 'McJim'@'localhost' (using password: YES)
+    [string:Exception:private] => 
+    [code:protected] => 1045
+    [file:protected] => D:\Server\www\templates\familytree\inc\Database.php
+    [line:protected] => 81
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 81
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=localhost;dbname=maatas
+                            [1] => McJim
+                            [2] => McJim654123
+                            [3] => Array
+                                (
+                                    [12] => 1
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 39
+                    [function] => connect
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\inc\Database.php
+                    [line] => 53
+                    [function] => __construct
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\fcms.php
+                    [line] => 20
+                    [function] => getInstance
+                    [class] => Database
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\Server\www\templates\familytree\admin\index.php
+                    [line] => 8
+                    [args] => Array
+                        (
+                            [0] => D:\Server\www\templates\familytree\fcms.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+    [xdebug_message] => <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[HY000] [1045] Access denied for user 'McJim'@'localhost' (using password: YES) in D:\Server\www\templates\familytree\inc\Database.php on line <i>81</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0004</td><td bgcolor='#eeeeec' align='right'>298432</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='D:\Server\www\templates\familytree\admin\index.php' bgcolor='#eeeeec'>...\index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0028</td><td bgcolor='#eeeeec' align='right'>410296</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'D:\Server\www\templates\familytree\fcms.php'</font> )</td><td title='D:\Server\www\templates\familytree\admin\index.php' bgcolor='#eeeeec'>...\index.php<b>:</b>8</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0087</td><td bgcolor='#eeeeec' align='right'>1620376</td><td bgcolor='#eeeeec'>Database::getInstance(  )</td><td title='D:\Server\www\templates\familytree\fcms.php' bgcolor='#eeeeec'>...\fcms.php<b>:</b>20</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0087</td><td bgcolor='#eeeeec' align='right'>1621296</td><td bgcolor='#eeeeec'>Database->__construct(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>53</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0087</td><td bgcolor='#eeeeec' align='right'>1621688</td><td bgcolor='#eeeeec'>Database->connect(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>39</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0087</td><td bgcolor='#eeeeec' align='right'>1622520</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDO.construct' target='_new'>__construct</a>
+(  )</td><td title='D:\Server\www\templates\familytree\inc\Database.php' bgcolor='#eeeeec'>...\Database.php<b>:</b>81</td></tr>
+
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [90]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 require called at [D:\Server\www\templates\familytree\admin\index.php:8]
+    #1 getInstance called at [D:\Server\www\templates\familytree\fcms.php:20]
+    #2 __construct called at [D:\Server\www\templates\familytree\inc\Database.php:53]
+    #3 connect called at [D:\Server\www\templates\familytree\inc\Database.php:39]
+    #4 add called at [D:\Server\www\templates\familytree\inc\Database.php:91]
+
+ 
+2025-09-26 13:51:22 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:51:22 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:51:39 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:51:39 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:54:03 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:54:03 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:55:39 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:55:39 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:58:14 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:58:14 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:58:19 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:58:19 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:58:21 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:58:21 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 13:59:49 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 13:59:49 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 14:00:05 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:00:05 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 14:00:20 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:00:20 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 14:02:48 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:02:48 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 14:03:25 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:03:25 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Server\www\templates\familytree\inc\utils.php [148]
+  PHP   - 5.6.40 (WINNT)
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayWhatsNewAll called at [D:\Server\www\templates\familytree\home.php:265]
+    #4 getUserDisplayName called at [D:\Server\www\templates\familytree\home.php:573]
+    #5 add called at [D:\Server\www\templates\familytree\inc\utils.php:149]
+
+ 
+2025-09-26 14:04:35 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:05:13 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:05:25 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 
+2025-09-26 14:05:52 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\templates\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\templates\familytree\home.php:29]
+    #1 control called at [D:\Server\www\templates\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\templates\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\templates\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\templates\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\templates\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\templates\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\templates\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\templates\familytree\inc\Database.php:225]
+
+ 

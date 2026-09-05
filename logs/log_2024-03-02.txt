@@ -1,0 +1,209 @@
+2024-03-02 6:31:22 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:31:37 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:32:06 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:35:05 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:38:48 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:39:22 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:42:50 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:48:46 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:23]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:48]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:82]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:291]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:52:50 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:24]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:49]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:83]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:292]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:53:06 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:24]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:49]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:83]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:292]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:58:14 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:24]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:49]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:83]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:292]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:58:29 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:24]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:49]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:83]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:292]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 6:59:11 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:24]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:49]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:83]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:292]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 7:09:42 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:22]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:47]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:81]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:290]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 7:09:54 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:22]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:47]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:81]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:290]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 7:12:39 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:22]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:47]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:81]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:290]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 7:14:40 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:22]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:47]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:81]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:290]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 7:19:31 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:22]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:47]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:81]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:290]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 
+2024-03-02 8:03:34 - ERROR --> Undefined variable: prev_tagged_options
+  FILE  - C:\wamp\www\dmaatas\inc\gallery_class.php [1938]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\gallery\index.php:22]
+    #1 control called at [C:\wamp\www\dmaatas\gallery\index.php:47]
+    #2 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:81]
+    #3 displayEditPhotoForm called at [C:\wamp\www\dmaatas\gallery\index.php:290]
+    #4 fcmsErrorHandler called at [C:\wamp\www\dmaatas\inc\gallery_class.php:1938]
+
+ 

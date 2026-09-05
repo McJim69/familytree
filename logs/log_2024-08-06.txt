@@ -1,0 +1,45 @@
+2024-08-06 2:10:57 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\register.php:8]
+    #1 control called at [C:\wamp\www\dmaatas\register.php:31]
+    #2 isRegistrationOn called at [C:\wamp\www\dmaatas\register.php:43]
+    #3 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:3983]
+    #4 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #5 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 
+2024-08-06 2:10:57 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 __construct called at [C:\wamp\www\dmaatas\register.php:8]
+    #1 control called at [C:\wamp\www\dmaatas\register.php:31]
+    #2 displayClosed called at [C:\wamp\www\dmaatas\register.php:45]
+    #3 displayHeader called at [C:\wamp\www\dmaatas\register.php:136]
+    #4 getSiteName called at [C:\wamp\www\dmaatas\register.php:74]
+    #5 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:2167]
+    #6 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #7 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 

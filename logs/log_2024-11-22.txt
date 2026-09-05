@@ -1,0 +1,19 @@
+2024-11-22 13:11:02 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 getCurrentVersion called at [C:\wamp\www\dmaatas\lostpw.php:13]
+    #1 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:2190]
+    #2 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #3 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 

@@ -1,0 +1,133 @@
+2024-09-07 6:06:13 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [284]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [C:\wamp\www\dmaatas\index.php:18]
+    #1 displayLoginForm called at [C:\wamp\www\dmaatas\index.php:46]
+    #2 handleFacebookLogin called at [C:\wamp\www\dmaatas\index.php:333]
+    #3 getFacebookConfigData called at [C:\wamp\www\dmaatas\index.php:543]
+    #4 getRows called at [C:\wamp\www\dmaatas\inc\socialmedia.php:13]
+    #5 add called at [C:\wamp\www\dmaatas\inc\Database.php:286]
+
+ 
+2024-09-07 6:06:13 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [C:\wamp\www\dmaatas\index.php:18]
+    #1 displayLoginForm called at [C:\wamp\www\dmaatas\index.php:46]
+    #2 displayHeader called at [C:\wamp\www\dmaatas\index.php:335]
+    #3 getCurrentVersion called at [C:\wamp\www\dmaatas\index.php:303]
+    #4 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:2190]
+    #5 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #6 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 
+2024-09-07 6:06:13 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'sitename'
+  STACK
+    #0 control called at [C:\wamp\www\dmaatas\index.php:18]
+    #1 displayLoginForm called at [C:\wamp\www\dmaatas\index.php:46]
+    #2 displayLogin called at [C:\wamp\www\dmaatas\index.php:336]
+    #3 getSiteName called at [C:\wamp\www\dmaatas\index.php:346]
+    #4 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:2167]
+    #5 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #6 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 
+2024-09-07 6:06:13 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value` AS 'registration'
+            FROM `fcms_config`
+            WHERE `name` = 'registration'
+            LIMIT 1
+  STACK
+    #0 control called at [C:\wamp\www\dmaatas\index.php:18]
+    #1 displayLoginForm called at [C:\wamp\www\dmaatas\index.php:46]
+    #2 displayLogin called at [C:\wamp\www\dmaatas\index.php:336]
+    #3 isRegistrationOn called at [C:\wamp\www\dmaatas\index.php:410]
+    #4 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:3983]
+    #5 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #6 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 
+2024-09-07 6:06:13 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [284]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `name`, `value`
+            FROM `fcms_config`
+            WHERE `name` = 'fb_app_id'
+            OR `name` = 'fb_secret'
+  STACK
+    #0 control called at [C:\wamp\www\dmaatas\index.php:18]
+    #1 displayLoginForm called at [C:\wamp\www\dmaatas\index.php:46]
+    #2 displayLogin called at [C:\wamp\www\dmaatas\index.php:336]
+    #3 getFacebookConfigData called at [C:\wamp\www\dmaatas\index.php:415]
+    #4 getRows called at [C:\wamp\www\dmaatas\inc\socialmedia.php:13]
+    #5 add called at [C:\wamp\www\dmaatas\inc\Database.php:286]
+
+ 
+2024-09-07 6:06:13 - ERROR --> Cannot query database. - Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'maatas.fcms_config' doesn't exist
+)
+
+  FILE  - C:\wamp\www\dmaatas\inc\Database.php [168]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `value`
+            FROM `fcms_config`
+            WHERE `name` = 'current_version'
+  STACK
+    #0 control called at [C:\wamp\www\dmaatas\index.php:18]
+    #1 displayLoginForm called at [C:\wamp\www\dmaatas\index.php:46]
+    #2 displayLogin called at [C:\wamp\www\dmaatas\index.php:336]
+    #3 getCurrentVersion called at [C:\wamp\www\dmaatas\index.php:451]
+    #4 getRow called at [C:\wamp\www\dmaatas\inc\utils.php:2190]
+    #5 getRowQuery called at [C:\wamp\www\dmaatas\inc\Database.php:144]
+    #6 add called at [C:\wamp\www\dmaatas\inc\Database.php:170]
+
+ 

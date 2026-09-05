@@ -1,0 +1,25 @@
+2025-09-28 13:10:01 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [223]
+  PHP   - 5.6.40 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\home.php:29]
+    #1 control called at [D:\Server\www\projects\familytree\home.php:58]
+    #2 displayWhatsNew called at [D:\Server\www\projects\familytree\home.php:83]
+    #3 displayNewUserHome called at [D:\Server\www\projects\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [D:\Server\www\projects\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [D:\Server\www\projects\familytree\inc\utils.php:4307]
+    #6 getRow called at [D:\Server\www\projects\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:149]
+    #8 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 

@@ -1,0 +1,232 @@
+2025-09-30 6:38:55 - ERROR --> Could not connect to host [localhost] with user [McJim]. - PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1045] Access denied for user 'McJim'@'localhost' (using password: YES)
+    [string:Exception:private] => 
+    [code:protected] => 1045
+    [file:protected] => C:\wamp\www\projects\familytree\inc\Database.php
+    [line:protected] => 81
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => C:\wamp\www\projects\familytree\inc\Database.php
+                    [line] => 81
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=localhost;dbname=familytree
+                            [1] => McJim
+                            [2] => Restricted654123
+                            [3] => Array
+                                (
+                                    [12] => 1
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => C:\wamp\www\projects\familytree\inc\Database.php
+                    [line] => 39
+                    [function] => connect
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => C:\wamp\www\projects\familytree\inc\Database.php
+                    [line] => 53
+                    [function] => __construct
+                    [class] => Database
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => C:\wamp\www\projects\familytree\fcms.php
+                    [line] => 20
+                    [function] => getInstance
+                    [class] => Database
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => FCMS_Error Object
+                                (
+                                    [type:FCMS_Error:private] => 
+                                    [message:FCMS_Error:private] => 
+                                    [details:FCMS_Error:private] => 
+                                    [error:FCMS_Error:private] => 
+                                    [line:FCMS_Error:private] => 
+                                    [file:FCMS_Error:private] => 
+                                    [stack:FCMS_Error:private] => 
+                                    [sql:FCMS_Error:private] => 
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => C:\wamp\www\projects\familytree\index.php
+                    [line] => 12
+                    [args] => Array
+                        (
+                            [0] => C:\wamp\www\projects\familytree\fcms.php
+                        )
+
+                    [function] => require
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+    [xdebug_message] => <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[HY000] [1045] Access denied for user 'McJim'@'localhost' (using password: YES) in C:\wamp\www\projects\familytree\inc\Database.php on line <i>81</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0012</td><td bgcolor='#eeeeec' align='right'>354176</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='C:\wamp\www\projects\familytree\index.php' bgcolor='#eeeeec'>..\index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0028</td><td bgcolor='#eeeeec' align='right'>464704</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'C:\wamp\www\projects\familytree\fcms.php'</font> )</td><td title='C:\wamp\www\projects\familytree\index.php' bgcolor='#eeeeec'>..\index.php<b>:</b>12</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0129</td><td bgcolor='#eeeeec' align='right'>1674320</td><td bgcolor='#eeeeec'>Database::getInstance(  )</td><td title='C:\wamp\www\projects\familytree\fcms.php' bgcolor='#eeeeec'>..\fcms.php<b>:</b>20</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0129</td><td bgcolor='#eeeeec' align='right'>1675216</td><td bgcolor='#eeeeec'>Database->__construct(  )</td><td title='C:\wamp\www\projects\familytree\inc\Database.php' bgcolor='#eeeeec'>..\Database.php<b>:</b>53</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0129</td><td bgcolor='#eeeeec' align='right'>1675632</td><td bgcolor='#eeeeec'>Database->connect(  )</td><td title='C:\wamp\www\projects\familytree\inc\Database.php' bgcolor='#eeeeec'>..\Database.php<b>:</b>39</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0129</td><td bgcolor='#eeeeec' align='right'>1676464</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDO.construct' target='_new'>__construct</a>
+(  )</td><td title='C:\wamp\www\projects\familytree\inc\Database.php' bgcolor='#eeeeec'>..\Database.php<b>:</b>81</td></tr>
+
+)
+
+  FILE  - C:\wamp\www\projects\familytree\inc\Database.php [90]
+  PHP   - 5.5.12 (WINNT)
+  STACK
+    #0 require called at [C:\wamp\www\projects\familytree\index.php:12]
+    #1 getInstance called at [C:\wamp\www\projects\familytree\fcms.php:20]
+    #2 __construct called at [C:\wamp\www\projects\familytree\inc\Database.php:53]
+    #3 connect called at [C:\wamp\www\projects\familytree\inc\Database.php:39]
+    #4 add called at [C:\wamp\www\projects\familytree\inc\Database.php:91]
+
+ 
+2025-09-30 6:39:27 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - C:\wamp\www\projects\familytree\inc\Database.php [223]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [C:\wamp\www\projects\familytree\home.php:29]
+    #1 control called at [C:\wamp\www\projects\familytree\home.php:58]
+    #2 displayWhatsNew called at [C:\wamp\www\projects\familytree\home.php:83]
+    #3 displayNewUserHome called at [C:\wamp\www\projects\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [C:\wamp\www\projects\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [C:\wamp\www\projects\familytree\inc\utils.php:4307]
+    #6 getRow called at [C:\wamp\www\projects\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [C:\wamp\www\projects\familytree\inc\Database.php:149]
+    #8 add called at [C:\wamp\www\projects\familytree\inc\Database.php:225]
+
+ 
+2025-09-30 6:40:01 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - C:\wamp\www\projects\familytree\inc\Database.php [223]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [C:\wamp\www\projects\familytree\home.php:29]
+    #1 control called at [C:\wamp\www\projects\familytree\home.php:58]
+    #2 displayWhatsNew called at [C:\wamp\www\projects\familytree\home.php:83]
+    #3 displayNewUserHome called at [C:\wamp\www\projects\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [C:\wamp\www\projects\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [C:\wamp\www\projects\familytree\inc\utils.php:4307]
+    #6 getRow called at [C:\wamp\www\projects\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [C:\wamp\www\projects\familytree\inc\Database.php:149]
+    #8 add called at [C:\wamp\www\projects\familytree\inc\Database.php:225]
+
+ 
+2025-09-30 6:40:03 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - C:\wamp\www\projects\familytree\inc\Database.php [223]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [C:\wamp\www\projects\familytree\home.php:29]
+    #1 control called at [C:\wamp\www\projects\familytree\home.php:58]
+    #2 displayWhatsNew called at [C:\wamp\www\projects\familytree\home.php:83]
+    #3 displayNewUserHome called at [C:\wamp\www\projects\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [C:\wamp\www\projects\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [C:\wamp\www\projects\familytree\inc\utils.php:4307]
+    #6 getRow called at [C:\wamp\www\projects\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [C:\wamp\www\projects\familytree\inc\Database.php:149]
+    #8 add called at [C:\wamp\www\projects\familytree\inc\Database.php:225]
+
+ 
+2025-09-30 6:40:05 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - C:\wamp\www\projects\familytree\inc\Database.php [223]
+  PHP   - 5.5.12 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 __construct called at [C:\wamp\www\projects\familytree\home.php:29]
+    #1 control called at [C:\wamp\www\projects\familytree\home.php:58]
+    #2 displayWhatsNew called at [C:\wamp\www\projects\familytree\home.php:83]
+    #3 displayNewUserHome called at [C:\wamp\www\projects\familytree\home.php:219]
+    #4 userConnectedSocialMedia called at [C:\wamp\www\projects\familytree\inc\alerts_class.php:63]
+    #5 getYouTubeUserData called at [C:\wamp\www\projects\familytree\inc\utils.php:4307]
+    #6 getRow called at [C:\wamp\www\projects\familytree\inc\socialmedia.php:311]
+    #7 getRowPrepared called at [C:\wamp\www\projects\familytree\inc\Database.php:149]
+    #8 add called at [C:\wamp\www\projects\familytree\inc\Database.php:225]
+
+ 

@@ -1,0 +1,518 @@
+2024-02-21 6:00:45 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Projects\www\dmaatas\inc\utils.php [148]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [D:\Projects\www\dmaatas\home.php:40]
+    #1 control called at [D:\Projects\www\dmaatas\home.php:69]
+    #2 displayWhatsNew called at [D:\Projects\www\dmaatas\home.php:94]
+    #3 displayWhatsNewAll called at [D:\Projects\www\dmaatas\home.php:276]
+    #4 getUserDisplayName called at [D:\Projects\www\dmaatas\home.php:584]
+    #5 add called at [D:\Projects\www\dmaatas\inc\utils.php:149]
+
+ 
+2024-02-21 6:06:09 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Projects\www\dmaatas\inc\utils.php [148]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [D:\Projects\www\dmaatas\home.php:40]
+    #1 control called at [D:\Projects\www\dmaatas\home.php:69]
+    #2 displayWhatsNew called at [D:\Projects\www\dmaatas\home.php:94]
+    #3 displayWhatsNewAll called at [D:\Projects\www\dmaatas\home.php:276]
+    #4 getUserDisplayName called at [D:\Projects\www\dmaatas\home.php:584]
+    #5 add called at [D:\Projects\www\dmaatas\inc\utils.php:149]
+
+ 
+2024-02-21 6:06:29 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Projects\www\dmaatas\inc\utils.php [148]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [D:\Projects\www\dmaatas\home.php:40]
+    #1 control called at [D:\Projects\www\dmaatas\home.php:69]
+    #2 displayWhatsNew called at [D:\Projects\www\dmaatas\home.php:94]
+    #3 displayWhatsNewAll called at [D:\Projects\www\dmaatas\home.php:276]
+    #4 getUserDisplayName called at [D:\Projects\www\dmaatas\home.php:584]
+    #5 add called at [D:\Projects\www\dmaatas\inc\utils.php:149]
+
+ 
+2024-02-21 6:06:46 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Projects\www\dmaatas\inc\utils.php [148]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [D:\Projects\www\dmaatas\home.php:40]
+    #1 control called at [D:\Projects\www\dmaatas\home.php:69]
+    #2 displayWhatsNew called at [D:\Projects\www\dmaatas\home.php:94]
+    #3 displayWhatsNewAll called at [D:\Projects\www\dmaatas\home.php:276]
+    #4 getUserDisplayName called at [D:\Projects\www\dmaatas\home.php:584]
+    #5 add called at [D:\Projects\www\dmaatas\inc\utils.php:149]
+
+ 
+2024-02-21 6:07:56 - ERROR --> Invalid user id. - 0
+  FILE  - D:\Projects\www\dmaatas\inc\utils.php [148]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [D:\Projects\www\dmaatas\home.php:40]
+    #1 control called at [D:\Projects\www\dmaatas\home.php:69]
+    #2 displayWhatsNew called at [D:\Projects\www\dmaatas\home.php:94]
+    #3 displayWhatsNewAll called at [D:\Projects\www\dmaatas\home.php:276]
+    #4 getUserDisplayName called at [D:\Projects\www\dmaatas\home.php:584]
+    #5 add called at [D:\Projects\www\dmaatas\inc\utils.php:149]
+
+ 
+2024-02-21 16:59:35 - ERROR --> PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+
+  FILE  - D:\Projects\www\dmaatas\inc\Database.php [104]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 require called at [D:\Projects\www\dmaatas\admin\index.php:20]
+    #1 getInstance called at [D:\Projects\www\dmaatas\fcms.php:20]
+    #2 __construct called at [D:\Projects\www\dmaatas\inc\Database.php:76]
+    #3 connect called at [D:\Projects\www\dmaatas\inc\Database.php:62]
+    #4 __construct called at [D:\Projects\www\dmaatas\inc\Database.php:104]
+    #5 fcmsErrorHandler called at [???:???]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: id
+  FILE  - D:\Projects\www\dmaatas\rss.php [128]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:128]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: id2
+  FILE  - D:\Projects\www\dmaatas\rss.php [129]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:129]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: userid
+  FILE  - D:\Projects\www\dmaatas\rss.php [130]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:130]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: title
+  FILE  - D:\Projects\www\dmaatas\rss.php [131]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:131]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [134]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:134]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [142]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:142]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [149]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:149]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [156]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:156]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [189]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:189]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [200]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:200]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [207]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:207]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [214]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:214]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [221]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:221]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [228]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:228]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [235]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:235]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [242]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:242]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [249]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:249]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [255]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:255]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [262]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:262]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [269]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:269]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [276]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:276]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [283]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:283]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [290]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:290]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [297]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:297]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [304]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:304]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: date
+  FILE  - D:\Projects\www\dmaatas\rss.php [314]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:314]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: date
+  FILE  - D:\Projects\www\dmaatas\rss.php [316]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:316]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: id
+  FILE  - D:\Projects\www\dmaatas\rss.php [128]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:128]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: id2
+  FILE  - D:\Projects\www\dmaatas\rss.php [129]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:129]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: userid
+  FILE  - D:\Projects\www\dmaatas\rss.php [130]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:130]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: title
+  FILE  - D:\Projects\www\dmaatas\rss.php [131]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:131]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [134]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:134]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [142]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:142]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [149]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:149]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [156]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:156]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [189]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:189]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [200]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:200]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [207]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:207]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [214]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:214]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [221]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:221]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [228]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:228]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [235]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:235]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [242]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:242]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [249]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:249]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [255]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:255]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [262]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:262]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [269]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:269]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [276]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:276]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [283]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:283]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [290]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:290]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [297]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:297]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: type
+  FILE  - D:\Projects\www\dmaatas\rss.php [304]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:304]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: date
+  FILE  - D:\Projects\www\dmaatas\rss.php [314]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:314]
+
+ 
+2024-02-21 19:47:32 - ERROR --> Undefined index: date
+  FILE  - D:\Projects\www\dmaatas\rss.php [316]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 displayFeedAll called at [D:\Projects\www\dmaatas\rss.php:36]
+    #1 fcmsErrorHandler called at [D:\Projects\www\dmaatas\rss.php:316]
+
+ 
+2024-02-21 20:15:02 - ERROR --> unlink(D:\Projects\www\dmaatas/uploads/avatar/) [<a href='function.unlink'>function.unlink</a>]: Permission denied
+  FILE  - D:\Projects\www\dmaatas\inc\Upload\FamilyTree.php [126]
+  PHP   - 5.3.0 (WINNT)
+  STACK
+    #0 __construct called at [D:\Projects\www\dmaatas\familytree.php:16]
+    #1 control called at [D:\Projects\www\dmaatas\familytree.php:42]
+    #2 uploadAdvancedAvatar called at [D:\Projects\www\dmaatas\familytree.php:131]
+    #3 upload called at [D:\Projects\www\dmaatas\familytree.php:1273]
+    #4 removeOldAvatar called at [D:\Projects\www\dmaatas\inc\Upload\FamilyTree.php:62]
+    #5 unlink called at [D:\Projects\www\dmaatas\inc\Upload\FamilyTree.php:126]
+    #6 fcmsErrorHandler called at [???:???]
+
+ 

@@ -104,19 +104,21 @@ class Page
             $link = sprintf(T_('Inbox (%d)'), $_SESSION['private_messages']);
         }
 
+        $inboxActive = (!isset($_GET['folder']) && !isset($_GET['compose'])) ? 'class="active"' : '';
+        $sentActive  = (isset($_GET['folder']) && $_GET['folder'] == 'sent') ? 'class="active"' : '';
+
         echo '
-            <div id="actions_menu">
-                <ul><li><a href="?compose=new">'.T_('New Message').'</a></li></ul>
-            </div>
-
-            <div id="leftcolumn">
-                <ul class="menu">
-                    <li><a href="privatemsg.php">'.$link.'</a></li>
-                    <li><a href="privatemsg.php?folder=sent">'.T_('Sent').'</a></li>
+            <div id="sections_menu">
+                <ul>
+                    <li><a href="privatemsg.php" '.$inboxActive.'>'.$link.'</a></li>
+                    <li><a href="privatemsg.php?folder=sent" '.$sentActive.'>'.T_('Sent').'</a></li>
                 </ul>
+                <div id="actions_menu">
+                    <ul><li><a href="?compose=new" class="btn-primary">'.T_('New Message').'</a></li></ul>
+                </div>
             </div>
 
-            <div id="maincolumn">';
+            <div id="maincolumn" class="full-width-column">';
     }
 
     /**

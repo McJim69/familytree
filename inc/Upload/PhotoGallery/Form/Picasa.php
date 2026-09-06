@@ -84,14 +84,16 @@ class PicasaUploadPhotoGalleryForm extends UploadPhotoGalleryForm
                     <label>'.T_('Category').'</label>
                     '.$this->getCategoryInputs().'
                 </div>
-                <ul class="upload-types">
-                    '.$this->getUploadTypesNavigation('picasa').'
-                </ul>
-                <div class="upload-area">
-                    <div class="picasa">
-                        '.$picasaInfo.'
+                <div class="photo-uploader-body">
+                    <ul class="upload-types">
+                        '.$this->getUploadTypesNavigation('picasa').'
+                    </ul>
+                    <div class="upload-area">
+                        <div class="picasa">
+                            '.$picasaInfo.'
+                        </div>
                     </div>
-                </div>
+                </div><!--/photo-uploader-body-->
                 <div class="footer">
                     <input class="sub1" type="submit" value="'.T_('Upload').'" id="submit-photos" name="picasa"/>
                 </div>

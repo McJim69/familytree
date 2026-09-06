@@ -73,18 +73,23 @@ class PhotoGallery
             $my = ' selected';
         }
 
+        $homeActive   = ($home !== '') ? 'active' : '';
+        $memberActive = ($member !== '') ? 'active' : '';
+        $ratedActive  = ($rated !== '') ? 'active' : '';
+        $viewedActive = ($viewed !== '') ? 'active' : '';
+        $myActive     = ($my !== '') ? 'active' : '';
+        $searchActive = ($search !== '') ? 'active' : '';
+
         echo '
-            <div id="gallery_menu">
-                <div id="sections_menu">
-                    <ul>
-                        <li><a class="'.$home.'" href="index.php">'.T_('Latest').'</a></li>
-                        <li><a class="'.$member.'" href="?uid=0">'.T_('Members').'</a></li>
-                        <li><a class="'.$rated.'" href="?uid='.$uid.'&amp;cid=toprated">'.T_('Top Rated').'</a></li>
-                        <li><a class="'.$viewed.'" href="?uid='.$uid.'&amp;cid=mostviewed">'.T_('Most Viewed').'</a></li>
-                        <li><a class="'.$my.'" href="?uid='.$this->fcmsUser->id.'">'.T_('My Photos').'</a></li>
-                        <li><a class="'.$search.'" href="?search=form">'.T_('Search').'</a></li>
-                    </ul>
-                </div>';
+            <div id="sections_menu">
+                <ul>
+                    <li><a class="'.$homeActive.'" href="index.php">'.T_('Latest').'</a></li>
+                    <li><a class="'.$memberActive.'" href="?uid=0">'.T_('Members').'</a></li>
+                    <li><a class="'.$ratedActive.'" href="?uid='.$uid.'&amp;cid=toprated">'.T_('Top Rated').'</a></li>
+                    <li><a class="'.$viewedActive.'" href="?uid='.$uid.'&amp;cid=mostviewed">'.T_('Most Viewed').'</a></li>
+                    <li><a class="'.$myActive.'" href="?uid='.$this->fcmsUser->id.'">'.T_('My Photos').'</a></li>
+                    <li><a class="'.$searchActive.'" href="?search=form">'.T_('Search').'</a></li>
+                </ul>';
 
         $access = $this->fcmsUser->access;
 
@@ -93,12 +98,14 @@ class PhotoGallery
             echo '
                 <div id="actions_menu">
                     <ul>
-                        <li><a class="upload" href="?action=upload">'.T_('Upload Photos').'</a></li>
-                        <li><a class="manage_categories" href="?action=category">'.T_('Manage Categories').'</a></li>
+                        <li><a class="btn-primary" href="?action=upload">'.T_('Upload Photos').'</a></li>
+                        <li><a class="btn-user-action" href="?action=category">'.T_('Manage Categories').'</a></li>
                     </ul>
-                </div>
-            </div>';
+                </div>';
         }
+
+        echo '
+            </div>';
     }
 
     /**
@@ -2358,7 +2365,7 @@ class PhotoGallery
         
         // Setup the list of categories for edit/delete
         $sql = "SELECT * FROM `fcms_category` 
-                WHERE `user` = '".$this->fcmsUser->id."'
+                WHERE `user` = ?
                 AND `type` = 'gallery'";
 
         $rows = $this->fcmsDatabase->getRows($sql, $this->fcmsUser->id);

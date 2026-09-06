@@ -127,14 +127,16 @@ class FacebookUploadPhotoGalleryForm extends UploadPhotoGalleryForm
                     <label>'.T_('Category').'</label>
                     '.$this->getCategoryInputs().'
                 </div>
-                <ul class="upload-types">
-                    '.$this->getUploadTypesNavigation('facebook').'
-                </ul>
-                <div class="upload-area">
-                    <div class="facebook">
-                        '.$facebookInfo.'
+                <div class="photo-uploader-body">
+                    <ul class="upload-types">
+                        '.$this->getUploadTypesNavigation('facebook').'
+                    </ul>
+                    <div class="upload-area">
+                        <div class="facebook">
+                            '.$facebookInfo.'
+                        </div>
                     </div>
-                </div>
+                </div><!--/photo-uploader-body-->
                 <div class="footer">
                     <input class="sub1" type="submit" value="'.T_('Upload').'" id="submit-photos" name="facebook"/>
                 </div>

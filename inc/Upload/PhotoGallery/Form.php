@@ -62,63 +62,65 @@ class UploadPhotoGalleryForm
                     <label>'.T_('Category').'</label>
                     '.$this->getCategoryInputs().'
                 </div>
-                <ul class="upload-types">
-                    '.$this->getUploadTypesNavigation('upload').'
-                </ul>
-                <div class="upload-area">
-                    <div class="basic">
-                        <p style="float:right">
-                            <a class="help" href="../help.php?topic=photo#gallery-howworks">'.T_('Help').'</a>
-                        </p>
-                        <p>
-                            <label><b>'.T_('Photo').'</b></label><br/>
-                            <input name="photo_filename" type="file" size="50"/>
-                        </p>
-                        <p>
-                            <label><b>'.T_('Caption').'</b></label><br/>
-                            <input class="frm_text" type="text" name="photo_caption" size="50"/>
-                        </p>
-                        <div id="tag-options">
-                            <label><b>'.T_('Who is in this Photo?').'</b></label><br/>
-                            <input type="text" id="autocomplete_input" class="frm_text autocomplete_input" 
-                                autocomplete="off" size="50" tabindex="3"/>
-                            <div id="autocomplete_instructions" class="autocomplete_instructions">
-                                '.T_('Type name of person...').'
-                            </div>
-                            <ul id="autocomplete_selected" class="autocomplete_selected"></ul>
-                            <div id="autocomplete_search" class="autocomplete_search" style="display:none"></div>
-                            <script type="text/javascript">
-                            $(document).ready(function() {
-                                var users = [ '.$autocompleteList.' ];
-                                $("#autocomplete_input").autocomplete({
-                                    lookup: users,
-                                    showNoSuggestionNotice: true,
-                                    noSuggestionNotice: "'.T_('No users found').'",
-                                    tabDisabled: true,
-                                    onSelect: function (suggestion) {
-                                        $("#autocomplete_instructions").hide();
-                                        $("#autocomplete_form").append(
-                                            "<input type=\"hidden\" name=\"tagged[]\" class=\"tagged\" value=\"" + suggestion.data + "\">"
-                                        );
-                                        $("#autocomplete_input").val("").focus();
-                                        $("#autocomplete_selected").append(
-                                            "<li>" + suggestion.value + "<a href=\"#\" alt=\"" + suggestion.data + "\" "
-                                                + "onclick=\"removeTagged(this);\">x</a></li>"
-                                        );
-                                    }
+                <div class="photo-uploader-body">
+                    <ul class="upload-types">
+                        '.$this->getUploadTypesNavigation('upload').'
+                    </ul>
+                    <div class="upload-area">
+                        <div class="basic">
+                            <p style="float:right">
+                                <a class="help" href="../help.php?topic=photo#gallery-howworks">'.T_('Help').'</a>
+                            </p>
+                            <p>
+                                <label><b>'.T_('Photo').'</b></label><br/>
+                                <input name="photo_filename" type="file" size="50"/>
+                            </p>
+                            <p>
+                                <label><b>'.T_('Caption').'</b></label><br/>
+                                <input class="frm_text" type="text" name="photo_caption" size="50"/>
+                            </p>
+                            <div id="tag-options">
+                                <label><b>'.T_('Who is in this Photo?').'</b></label><br/>
+                                <input type="text" id="autocomplete_input" class="frm_text autocomplete_input" 
+                                    autocomplete="off" size="50" tabindex="3"/>
+                                <div id="autocomplete_instructions" class="autocomplete_instructions">
+                                    '.T_('Type name of person...').'
+                                </div>
+                                <ul id="autocomplete_selected" class="autocomplete_selected"></ul>
+                                <div id="autocomplete_search" class="autocomplete_search" style="display:none"></div>
+                                <script type="text/javascript">
+                                $(document).ready(function() {
+                                    var users = [ '.$autocompleteList.' ];
+                                    $("#autocomplete_input").autocomplete({
+                                        lookup: users,
+                                        showNoSuggestionNotice: true,
+                                        noSuggestionNotice: "'.T_('No users found').'",
+                                        tabDisabled: true,
+                                        onSelect: function (suggestion) {
+                                            $("#autocomplete_instructions").hide();
+                                            $("#autocomplete_form").append(
+                                                "<input type=\"hidden\" name=\"tagged[]\" class=\"tagged\" value=\"" + suggestion.data + "\">"
+                                            );
+                                            $("#autocomplete_input").val("").focus();
+                                            $("#autocomplete_selected").append(
+                                                "<li>" + suggestion.value + "<a href=\"#\" alt=\"" + suggestion.data + "\" "
+                                                    + "onclick=\"removeTagged(this);\">x</a></li>"
+                                            );
+                                        }
+                                    });
                                 });
-                            });
-                            </script>
-                        </div>
-                        <p class="rotate-options">
-                            <label><b>'.T_('Rotate').'</b></label><br/>
-                            <input type="radio" id="left" name="rotate" value="left"/>
-                            <label for="left" class="radio_label">'.T_('Left').'</label>&nbsp;&nbsp; 
-                            <input type="radio" id="right" name="rotate" value="right"/>
-                            <label for="right" class="radio_label">'.T_('Right').'</label>
-                        </p>
-                    </div><!--/basic-->
-                </div>
+                                </script>
+                            </div>
+                            <p class="rotate-options">
+                                <label><b>'.T_('Rotate').'</b></label><br/>
+                                <input type="radio" id="left" name="rotate" value="left"/>
+                                <label for="left" class="radio_label">'.T_('Left').'</label>&nbsp;&nbsp; 
+                                <input type="radio" id="right" name="rotate" value="right"/>
+                                <label for="right" class="radio_label">'.T_('Right').'</label>
+                            </p>
+                        </div><!--/basic-->
+                    </div>
+                </div><!--/photo-uploader-body-->
                 <div class="footer">
                     <input class="sub1" type="submit" id="submit-photos" name="addphoto" value="'.T_('Submit').'"/>
                 </div>

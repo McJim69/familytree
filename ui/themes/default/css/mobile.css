@@ -92,6 +92,16 @@
         max-width: 100% !important;
     }
     
+    .profile-hero-card {
+        flex-wrap: wrap !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    
+    .profile-info-cards {
+        grid-template-columns: 1fr !important;
+    }
+    
     table, tr, td, th {
         max-width: 100%;
     }
@@ -102,12 +112,186 @@
         -webkit-overflow-scrolling: touch;
     }
     
+    #sections_menu {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+    
+    #sections_menu ul {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    #sections_menu li {
+        width: 100% !important;
+    }
+
+    #sections_menu li a {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    #actions_menu {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    #actions_menu ul {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    #actions_menu li {
+        width: 100% !important;
+    }
+
+    #actions_menu a.btn-primary {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .mb-search-group {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    .mb-search-form {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    .mb-search-form input[type="text"] {
+        width: 100% !important;
+    }
+
+    .mb-search-form input[type="submit"] {
+        width: 100% !important;
+    }
+
+    form#addform,
+    form#editform,
+    form#frm,
+    fieldset,
+    .toolbar,
+    textarea#post,
+    textarea#news {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
     input[type="text"],
     input[type="password"],
     input[type="email"],
     select,
     textarea {
-        max-width: 100%;
-        box-sizing: border-box;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Photo Uploader Mobile Responsive */
+    .photo-uploader-body {
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    .photo-uploader .upload-types {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        overflow-x: auto !important;
+        padding-bottom: 4px !important;
+    }
+
+    .photo-uploader .upload-types li {
+        flex: 1 0 auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    .photo-uploader .upload-types li a {
+        text-align: center !important;
+        white-space: nowrap !important;
+        padding: 8px 14px !important;
+    }
+
+    .photo-uploader .upload-area {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Address Book Mobile Responsive */
+    .addressbook-body {
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    .addressbook-body #leftcolumn,
+    #addressbook #leftcolumn {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 12px !important;
+    }
+
+    .addressbook-body #leftcolumn ul,
+    #addressbook #leftcolumn ul {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .addressbook-body #leftcolumn ul li,
+    #addressbook #leftcolumn ul li {
+        flex: 1 1 calc(50% - 8px) !important;
+        margin-bottom: 0 !important;
+    }
+
+    .addressbook-body #maincolumn,
+    #addressbook #maincolumn {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    #address-table,
+    #manage-categories {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    /* Calendar Mobile Responsive */
+    #big-calendar,
+    #day-calendar {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    #big-calendar td {
+        min-width: 40px !important;
+        height: 60px !important;
+        padding: 2px !important;
+        font-size: 11px !important;
+    }
+
+    #big-calendar th {
+        font-size: 10px !important;
+        padding: 8px 2px !important;
+        height: auto !important;
+    }
+
+    #big-calendar .weekDays {
+        font-size: 9px !important;
     }
 }

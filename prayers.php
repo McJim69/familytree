@@ -110,6 +110,9 @@ class Page
             'year'    => date('Y')
         );
 
+        echo '
+        </div><!--/#maincolumn-->';
+
         loadTemplate('global', 'footer', $params);
     }
 
@@ -125,7 +128,7 @@ class Page
         ));
 
         echo '
-            <form method="post" name="addform" action="prayers.php">
+            <form method="post" id="addform" name="addform" action="prayers.php">
                 <fieldset>
                     <legend><span>'.T_('Add a Prayer Concern').'</span></legend>
                     <div>
@@ -247,7 +250,7 @@ class Page
         $desc = $_POST['desc'];
 
         echo '
-            <form method="post" name="editform" action="prayers.php">
+            <form method="post" id="editform" name="editform" action="prayers.php">
                 <fieldset>
                     <legend><span>'.T_('Edit Prayer Concern').'</span></legend>
                     <div>
@@ -396,10 +399,15 @@ class Page
         if ($this->fcmsUser->access <= 5)
         {
             echo '
-            <div id="actions_menu">
-                <ul><li><a class="action" href="?addconcern=yes">'.T_('Add a Prayer Concern').'</a></li></ul>
+            <div id="sections_menu">
+                <div id="actions_menu">
+                    <ul><li><a class="btn-primary" href="?addconcern=yes">'.T_('Add a Prayer Concern').'</a></li></ul>
+                </div>
             </div>';
         }
+
+        echo '
+        <div id="maincolumn" class="full-width-column">';
 
         $page = getPage();
 

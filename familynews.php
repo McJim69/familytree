@@ -124,26 +124,32 @@ class Page
 
         if ($this->fcmsUser->access < 6 || $this->fcmsUser->access == 9)
         {
+            $latestActive = (!isset($_GET['getnews']) && !isset($_GET['addnews'])) ? 'class="active"' : '';
+            $myNewsActive = (isset($_GET['getnews']) && $_GET['getnews'] == $this->fcmsUser->id) ? 'class="active"' : '';
+
             echo '
             <div id="sections_menu">
                 <ul>
-                    <li><a href="familynews.php">'.T_('Latest News').'</a></li>';
+                    <li><a href="familynews.php" '.$latestActive.'>'.T_('Latest News').'</a></li>';
 
             if ($this->fcmsFamilyNews->hasNews($this->fcmsUser->id))
             {
                 echo '
-                    <li><a href="?getnews='.$this->fcmsUser->id.'">'.T_('My News').'</a></li>';
+                    <li><a href="?getnews='.$this->fcmsUser->id.'" '.$myNewsActive.'>'.T_('My News').'</a></li>';
             }
 
             echo '
                 </ul>
-            </div>
-            <div id="actions_menu">
-                <ul>
-                    <li><a href="?addnews=yes">'.T_('Add News').'</a></li>
-                </ul>
+                <div id="actions_menu">
+                    <ul>
+                        <li><a href="?addnews=yes" class="btn-primary">'.T_('Add News').'</a></li>
+                    </ul>
+                </div>
             </div>';
         }
+
+        echo '
+        <div id="maincolumn" class="full-width-column">';
 
         if (!isset($_GET['addnews']) && !isset($_POST['editnews']))
         {
@@ -163,6 +169,9 @@ class Page
             'version' => getCurrentVersion(),
             'year'    => date('Y')
         );
+
+        echo '
+        </div><!--/#maincolumn-->';
 
         loadTemplate('global', 'footer', $params);
     }

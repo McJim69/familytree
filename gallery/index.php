@@ -260,6 +260,9 @@ class Page
         }
 
         displayPageHeader($params, $options);
+
+        echo '
+        <div id="maincolumn" class="full-width-column">';
     }
 
     /**
@@ -274,6 +277,9 @@ class Page
             'version' => getCurrentVersion(),
             'year'    => date('Y')
         );
+
+        echo '
+        </div><!--/#maincolumn-->';
 
         loadTemplate('global', 'footer', $params);
     }

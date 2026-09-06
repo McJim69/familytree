@@ -80,37 +80,39 @@ class JavaUploadPhotoGalleryForm extends UploadPhotoGalleryForm
                     <label>'.T_('Category').'</label>
                     '.$this->getCategoryInputs().'
                 </div>
-                <ul class="upload-types">
-                    '.$this->getUploadTypesNavigation('upload').'
-                </ul>
-                <div class="upload-area">
-                    <applet id="jumpLoaderApplet" name="jumpLoaderApplet"
-                        code="jmaster.jumploader.app.JumpLoaderApplet.class"
-                        archive="../inc/thirdparty/jumploader_z.jar"
-                        width="758"
-                        height="300"
-                        mayscript>
-                        <param name="uc_sendImageMetadata" value="true"/>
-                        <param name="uc_uploadUrl" value="index.php"/>
-                        <param name="vc_useThumbs" value="true"/>
-                        <param name="uc_uploadScaledImagesNoZip" value="true"/>
-                        <param name="uc_uploadScaledImages" value="true"/>
-                        '.$scaledInstanceNames.'
-                        '.$scaledInstanceDimensions.'
-                        <param name="uc_scaledInstanceQualityFactors" value="900"/>
-                        <param name="uc_uploadFormName" value="uploadForm"/>
-                        <param name="vc_lookAndFeel" value="system"/>
-                        <param name="vc_uploadViewStartActionVisible" value="false"/>
-                        <param name="vc_uploadViewStopActionVisible" value="false"/>
-                        <param name="vc_uploadViewPasteActionVisible" value="false"/>
-                        <param name="vc_uploadViewRetryActionVisible" value="false"/>
-                        <param name="vc_uploadViewFilesSummaryBarVisible" value="false"/>
-                        <param name="vc_uiDefaults" value="Panel.background=#eff0f4; List.background=#eff0f4;"/> 
-                        <param name="ac_fireAppletInitialized" value="true"/>
-                        <param name="ac_fireUploaderStatusChanged" value="true"/> 
-                        <param name="ac_fireUploaderFileStatusChanged" value="true"/>
-                    </applet>
-                </div>
+                <div class="photo-uploader-body">
+                    <ul class="upload-types">
+                        '.$this->getUploadTypesNavigation('upload').'
+                    </ul>
+                    <div class="upload-area">
+                        <applet id="jumpLoaderApplet" name="jumpLoaderApplet"
+                            code="jmaster.jumploader.app.JumpLoaderApplet.class"
+                            archive="../inc/thirdparty/jumploader_z.jar"
+                            width="100%"
+                            height="300"
+                            mayscript>
+                            <param name="uc_sendImageMetadata" value="true"/>
+                            <param name="uc_uploadUrl" value="index.php"/>
+                            <param name="vc_useThumbs" value="true"/>
+                            <param name="uc_uploadScaledImagesNoZip" value="true"/>
+                            <param name="uc_uploadScaledImages" value="true"/>
+                            '.$scaledInstanceNames.'
+                            '.$scaledInstanceDimensions.'
+                            <param name="uc_scaledInstanceQualityFactors" value="900"/>
+                            <param name="uc_uploadFormName" value="uploadForm"/>
+                            <param name="vc_lookAndFeel" value="system"/>
+                            <param name="vc_uploadViewStartActionVisible" value="false"/>
+                            <param name="vc_uploadViewStopActionVisible" value="false"/>
+                            <param name="vc_uploadViewPasteActionVisible" value="false"/>
+                            <param name="vc_uploadViewRetryActionVisible" value="false"/>
+                            <param name="vc_uploadViewFilesSummaryBarVisible" value="false"/>
+                            <param name="vc_uiDefaults" value="Panel.background=#eff0f4; List.background=#eff0f4;"/> 
+                            <param name="ac_fireAppletInitialized" value="true"/>
+                            <param name="ac_fireUploaderStatusChanged" value="true"/> 
+                            <param name="ac_fireUploaderFileStatusChanged" value="true"/>
+                        </applet>
+                    </div>
+                </div><!--/photo-uploader-body-->
                 <div class="footer">
                     <input class="sub1" type="button" value="'.T_('Upload').'" id="start-upload" name="start-upload"/>
                 </div>

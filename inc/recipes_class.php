@@ -44,6 +44,9 @@ class Recipes
             </div>';
         }
 
+        echo '
+        <div class="recipes-body">';
+
         // Show Category Side Menu
         $hasCategories = $this->showCategoryMenu();
 
@@ -53,7 +56,8 @@ class Recipes
                 <h2>'.T_('Nothing to see here').'</h2>
                 <h3>'.T_('Currently no one has added any recipes').'</h3>
                 <h3><a href="?addrecipe=yes">'.T_('Why don\'t you share a recipe now?').'</a></h3>
-            </div>';
+            </div>
+            </div><!--/recipes-body-->';
             return;
         }
 
@@ -70,6 +74,7 @@ class Recipes
         if ($rows === false)
         {
             $this->fcmsError->displayError();
+            echo '</div></div><!--/recipes-body-->';
 
             return;
         }
@@ -80,7 +85,9 @@ class Recipes
             <div class="info-alert">
                 <p><i>'.T_('Currently no one has added any recipes.').'</i></p>
                 <p><a href="?addrecipe=yes">'.T_('Add a Recipe').'</a></p>
-            </div>';
+            </div>
+            </div>
+            </div><!--/recipes-body-->';
 
             return;
         }
@@ -98,33 +105,35 @@ class Recipes
 
         foreach ($rows as $r)
         {
-            $since = getHumanTimeSince(strtotime($r['date']));
+            $thumbnail = $r['thumbnail'];
+            if (empty($r['thumbnail']))
+            {
+                $thumbnail = 'no_recipe.jpg';
+            }
 
             echo '
                     <li>
-                        <a href="?category=' . (int)$r['category'] . '&amp;id=' . (int)$r['id'] . '">
-                            <span>' . T_('Click to view recipe') . '</span>
-                            <img src="'.URL_PREFIX.$path.basename($r['thumbnail']).'"/>
-                            <b>'.cleanOutput($r['name']).'</b>
-                            <i>'.$since.'</i>
+                        <a href="?category='.$r['category'].'&amp;id='.$r['id'].'">
+                            <img src="'.$path.$thumbnail.'"/>
+                            <span>'.cleanOutput($r['name']).'</span>
                         </a>
                     </li>';
         }
 
-        // Close maincolumn and recipe-list
         echo '
                 </ul>
-            </div>';
+            </div>
+        </div><!--/recipes-body-->';
 
-        // Display Pagination
-        $sql = "SELECT count(`id`) AS c 
-                FROM `fcms_recipes`";
+        // Count Total Recipes
+        $sql = "SELECT count(`id`) AS c
+                FROM `fcms_recipes` 
+                LIMIT 1";
 
         $r = $this->fcmsDatabase->getRow($sql);
         if ($r === false)
         {
             $this->fcmsError->displayError();
-
             return;
         }
 

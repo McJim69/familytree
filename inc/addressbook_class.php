@@ -104,49 +104,51 @@ class AddressBook
 
         // Display address
         echo '
-            <div id="leftcolumn">';
+            <div class="addressbook-body">
+                <div id="leftcolumn">';
 
         $this->displayCategories($cat);
 
         echo '
-            </div>
-            <div id="maincolumn">
-
-                <div id="address-options">
-                    <ul>
-                        <li id="back"><a href="?cat='.$cat.'">'.T_('Back to Addresses').'</a></li>
-                        <li id="email"><a href="mailto:'.cleanOutput($r['email']).'">'.T_('Email').'</a></li>
-                        '.$edit_del.'
-                    </ul>
                 </div>
-                <div id="address-details">
-                    <p>
-                        <img alt="avatar" src="'.getCurrentAvatar($r['user']).'"/>
-                        <b class="name">'.cleanOutput($r['fname']).' '.cleanOutput($r['lname']).'</b>
-                    </p>
-                    <p>
-                        <b class="label">'.T_('Address').':</b>
-                        <span class="data">'.$address.' '.$map_link.'</span>
-                    </p>
-                    <p>
-                        <b class="label">'.T_('Email').':</b>
-                        <span class="data">'.$email.'</span>
-                    </p>
-                    <p>
-                        <b class="label">'.T_pgettext('The dwelling where you live.', 'Home').':</b>
-                        <span class="data">'.$home.'</span>
-                    </p>
-                    <p>
-                        <b class="label">'.T_('Work').':</b>
-                        <span class="data">'.$work.'</span>
-                    </p>
-                    <p>
-                        <b class="label">'.T_('Mobile').':</b>
-                        <span class="data">'.$cell.'</span>
-                    </p>
-                </div>
+                <div id="maincolumn">
 
-            </div>';
+                    <div id="address-options">
+                        <ul>
+                            <li id="back"><a href="?cat='.$cat.'">'.T_('Back to Addresses').'</a></li>
+                            <li id="email"><a href="mailto:'.cleanOutput($r['email']).'">'.T_('Email').'</a></li>
+                            '.$edit_del.'
+                        </ul>
+                    </div>
+                    <div id="address-details">
+                        <p>
+                            <img alt="avatar" src="'.getCurrentAvatar($r['user']).'"/>
+                            <b class="name">'.cleanOutput($r['fname']).' '.cleanOutput($r['lname']).'</b>
+                        </p>
+                        <p>
+                            <b class="label">'.T_('Address').':</b>
+                            <span class="data">'.$address.' '.$map_link.'</span>
+                        </p>
+                        <p>
+                            <b class="label">'.T_('Email').':</b>
+                            <span class="data">'.$email.'</span>
+                        </p>
+                        <p>
+                            <b class="label">'.T_pgettext('The dwelling where you live.', 'Home').':</b>
+                            <span class="data">'.$home.'</span>
+                        </p>
+                        <p>
+                            <b class="label">'.T_('Work').':</b>
+                            <span class="data">'.$work.'</span>
+                        </p>
+                        <p>
+                            <b class="label">'.T_('Mobile').':</b>
+                            <span class="data">'.$cell.'</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div><!--/addressbook-body-->';
     }
 
     /**
@@ -161,48 +163,51 @@ class AddressBook
     function displayAddressList ($cat = '')
     {
         echo '
-            <div id="leftcolumn">';
+            <div class="addressbook-body">
+                <div id="leftcolumn">';
 
         $this->displayCategories($cat);
 
         echo '
-            </div>
-            <div id="maincolumn">
+                </div>
+                <div id="maincolumn">
 
-                <form action="addressbook.php" id="check_all_form" name="check_all_form" method="post">
-                <table id="address-table" cellspacing="0" cellpadding="0">
-                    <thead>
-                        <tr>
-                            <th colspan="2">
-                                <div id="check-all"></div>
-                            </th>
-                            <th style="text-align:right" colspan="2">
-                                <a href="?add=yes">'.T_('Add New Address').'</a>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="header">
-                            <td class="chk"></td> 
-                            <td>'.T_('Name').'</td> 
-                            <td>'.T_('Address').'</td> 
-                            <td>'.T_('Phone').'</td> 
-                        </tr>';
+                    <form action="addressbook.php" id="check_all_form" name="check_all_form" method="post">
+                    <table id="address-table" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div id="check-all"></div>
+                                </th>
+                                <th style="text-align:right" colspan="2">
+                                    <a href="?add=yes">'.T_('Add New Address').'</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="header">
+                                <td class="chk"></td> 
+                                <td>'.T_('Name').'</td> 
+                                <td>'.T_('Address').'</td> 
+                                <td>'.T_('Phone').'</td> 
+                            </tr>';
 
         $this->displayAddressInCategory($cat);
 
         echo '
-                    </tbody>
-                </table>';
+                        </tbody>
+                    </table>';
 
         if ($this->fcmsUser->access <= 3)
         {
             echo '
-                <p class="alignright"><input class="sub1" type="submit" name="emailsubmit" value="'.T_('Email Selected').'"/></p>';
+                    <p class="alignright"><input class="sub1" type="submit" name="emailsubmit" value="'.T_('Email Selected').'"/></p>';
         }
 
         echo '
-            </form>';
+                </form>
+            </div>
+        </div><!--/addressbook-body-->';
     }
 
     /**

@@ -766,17 +766,19 @@ class MessageBoard
         if ($thread_id == 0)
         {
             echo '
-            <div id="actions_menu">
-                <ul>
-                    <li class="advanced_search"><a href="?search=advanced">'.T_('Advanced Search').'</a></li>
-                    <li class="search">
-                        <form method="post" action="messageboard.php">
-                            <input type="text" id="search" name="search"/>
-                            <input type="submit" value="'.T_('Search').'"/>
-                        </form>
-                    </li>
-                    <li><a href="messageboard.php?reply=new">'.T_('New Message').'</a></li>
-                </ul>
+            <div id="sections_menu">
+                <div class="mb-search-group">
+                    <form method="post" action="messageboard.php" class="mb-search-form">
+                        <input type="text" id="search" name="search" placeholder="'.T_('Search messages...').'"/>
+                        <input type="submit" value="'.T_('Search').'"/>
+                    </form>
+                    <a href="?search=advanced" class="btn-adv-search">'.T_('Advanced Search').'</a>
+                </div>
+                <div id="actions_menu">
+                    <ul>
+                        <li><a href="messageboard.php?reply=new" class="btn-primary">'.T_('New Message').'</a></li>
+                    </ul>
+                </div>
             </div>';
         }
         else
@@ -785,18 +787,20 @@ class MessageBoard
             <div id="sections_menu">
                 <ul>
                     <li><a href="messageboard.php">'.T_('Message Board Home').'</a></li>
-                </ul>
-            </div>';
+                </ul>';
 
             if ($this->fcmsUser->access < 8 && $this->fcmsUser->access != 5)
             {
                 echo '
-            <div id="actions_menu">
-                <ul>
-                    <li><a class="action" href="messageboard.php?reply='.$thread_id.'">'.T_('Reply').'</a></li>
-                </ul>
-            </div>';
+                <div id="actions_menu">
+                    <ul>
+                        <li><a class="btn-primary" href="messageboard.php?reply='.$thread_id.'">'.T_('Reply').'</a></li>
+                    </ul>
+                </div>';
             }
+
+            echo '
+            </div>';
         }
     }
 

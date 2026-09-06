@@ -189,18 +189,20 @@ class PluploadUploadPhotoGalleryForm extends UploadPhotoGalleryForm
                     <label>'.T_('Category').'</label>
                     '.$this->getCategoryInputs().'
                 </div>
-                <ul class="upload-types">
-                    '.$this->getUploadTypesNavigation('upload').'
-                </ul>
-                <div class="upload-area">
-                    <div class="plupload">
-                        <p style="float:right">
-                            <a class="help" href="../help.php?topic=photo#gallery-howworks">'.T_('Help').'</a>
-                        </p>
-                        <div id="uploader">
-                        </div>
-                    </div><!--/plupload-->
-                </div>
+                <div class="photo-uploader-body">
+                    <ul class="upload-types">
+                        '.$this->getUploadTypesNavigation('upload').'
+                    </ul>
+                    <div class="upload-area">
+                        <div class="plupload">
+                            <p style="float:right">
+                                <a class="help" href="../help.php?topic=photo#gallery-howworks">'.T_('Help').'</a>
+                            </p>
+                            <div id="uploader">
+                            </div>
+                        </div><!--/plupload-->
+                    </div>
+                </div><!--/photo-uploader-body-->
                 <div class="footer">
                     <input class="sub1" type="submit" id="submit-photos" name="addphoto" value="'.T_('Submit').'"/>
                 </div>

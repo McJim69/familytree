@@ -76,14 +76,16 @@ class InstagramUploadPhotoGalleryForm extends UploadPhotoGalleryForm
         echo '
             <form method="post" class="photo-uploader" action="index.php?action=upload&amp;type=instagram">
                 <div class="header"></div>
-                <ul class="upload-types">
-                    '.$this->getUploadTypesNavigation('instagram').'
-                </ul>
-                <div class="upload-area">
-                    <div class="instagram">
-                        '.$instagramInfo.'
+                <div class="photo-uploader-body">
+                    <ul class="upload-types">
+                        '.$this->getUploadTypesNavigation('instagram').'
+                    </ul>
+                    <div class="upload-area">
+                        <div class="instagram">
+                            '.$instagramInfo.'
+                        </div>
                     </div>
-                </div>
+                </div><!--/photo-uploader-body-->
                 <div class="footer">
                     <input class="sub1" type="submit" value="'.T_('Upload').'" id="instagram" name="instagram"/>
                 </div>

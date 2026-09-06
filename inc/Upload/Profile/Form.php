@@ -54,12 +54,12 @@ class UploadProfileForm
 
                         <div class="field-row">
                             <div class="field-label">
-                                <label for="avatar"><b>'.T_('Change Avatar').'</b></label>
+                                <label for="avatar_type"><b>'.T_('Change Avatar').'</b></label>
                             </div>
                             <div class="field-widget">
                                 <select name="avatar_type" id="avatar_type">
                                     '.$avatarOptions.'
-                                </select><br/>
+                                </select>
                             </div>
                         </div>
 
@@ -71,31 +71,35 @@ class UploadProfileForm
                         </div>
 
                         <div id="gravatar" class="field-row">
-                            <div class="field-label">&nbsp;</div>
+                            <div class="field-label">
+                                <label for="gravatar_email"><b>'.T_('Gravatar Email').'</b></label>
+                            </div>
                             <div class="field-widget">
-                                <b>'.T_('Gravatar Email').'</b><br/>
-                                <input type="text" name="gravatar_email" size="30" value="'.cleanOutput($this->data['gravatar']).'"/><br/>
+                                <input type="text" id="gravatar_email" name="gravatar_email" size="30" value="'.cleanOutput($this->data['gravatar']).'"/>
                             </div>
                         </div>
 
                         <div id="default" class="field-row">
-                            <div class="field-label">&nbsp;</div>
+                            <div class="field-label">
+                                <label><b>'.T_('Default').'</b></label>
+                            </div>
                             <div class="field-widget">
-                                <b>'.T_('Default').'</b><br/>
-                                <img id="current-avatar" src="'.getAvatarPath('no_avatar.jpg', '').'" alt="'.T_('Default avatar.').'"/>
+                                <img id="default-avatar" src="'.getAvatarPath('no_avatar.jpg', '').'" alt="'.T_('Default avatar.').'"/>
                             </div>
                         </div>
 
                         <div class="field-row">
                             <div class="field-label">
-                                <label for="avatar"><b>'.T_('Current Avatar').'</b></label>
+                                <label for="current-avatar"><b>'.T_('Current Avatar').'</b></label>
                             </div>
                             <div class="field-widget">
                                 <img id="current-avatar" src="'.getCurrentAvatar($this->fcmsUser->id).'" alt="'.T_('This is your current avatar.').'"/>
                             </div>
                         </div>
 
-                        <p><input class="sub1" type="submit" name="submit" id="submit-avatar" value="'.T_('Submit').'"/></p>
+                        <div class="field-row" style="margin-top: 15px;">
+                            <input class="sub1" type="submit" name="submit" id="submit-avatar" value="'.T_('Submit').'"/>
+                        </div>
 
                     </fieldset>
                 </form>';
@@ -109,10 +113,12 @@ class UploadProfileForm
     protected function displayUploadArea ()
     {
         echo '
-                            <div class="field-label">&nbsp;</div>
+                            <div class="field-label">
+                                <label for="avatar"><b>'.T_('Upload File').'</b></label>
+                            </div>
                             <div class="field-widget">
                                 <input type="file" name="avatar" id="avatar" size="30" title="'.T_('Upload your personal image (Avatar)').'"/>
-                                <input type="hidden" name="avatar_orig" value="'.cleanOutput($this->data['avatar']).'"/><br/>
+                                <input type="hidden" name="avatar_orig" value="'.cleanOutput($this->data['avatar']).'"/>
                             </div>';
     }
 

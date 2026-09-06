@@ -195,20 +195,22 @@ $(document).ready(function() {
                 return;
             }
 
-            if ($memberId == $this->fcmsUser->id)
-            {
-                echo '
-            <div id="actions_menu">
-                <ul>
-                    <li><a class="btn-profile-action" href="profile.php">⚙️ '.T_('Edit Profile').'</a></li>
-                </ul>
-            </div>';
-            }
-
             $currentView = isset($_GET['view']) ? $_GET['view'] : '';
 
             echo '
-            <div id="leftcolumn">
+            <div id="leftcolumn">';
+
+            if ($memberId == $this->fcmsUser->id)
+            {
+                echo '
+                <div class="sidebar-block">
+                    <ul class="menu sidebar-menu" style="margin:0;padding:0;">
+                        <li><a class="btn-profile-action" href="profile.php" style="justify-content:center;">⚙️ '.T_('Edit Profile').'</a></li>
+                    </ul>
+                </div>';
+            }
+
+            echo '
                 <div class="sidebar-block">
                     <h3>'.T_('Sections').'</h3>
                     <ul class="menu sidebar-menu">
@@ -438,10 +440,6 @@ $(document).ready(function() {
                 <b class="info-label">📞 '.T_('Contact').'</b>
                 <div class="info-value">'.(empty($contact) ? '<span class="text-muted">'.T_('No phone contacts listed').'</span>' : $contact).'</div>
             </div>
-            <div class="profile-info-box bio-box">
-                <b class="info-label">📝 '.T_('Bio').'</b>
-                <div class="info-value">'.(empty($row['bio']) ? '<span class="text-muted">'.T_('No biography provided yet.').'</span>' : cleanOutput($row['bio'])).'</div>
-            </div>
             <div class="profile-info-box">
                 <b class="info-label">📅 '.T_('Join Date').'</b>
                 <div class="info-value">'.$joinDate.'</div>
@@ -449,6 +447,10 @@ $(document).ready(function() {
             <div class="profile-info-box">
                 <b class="info-label">🕒 '.T_('Last Visit').'</b>
                 <div class="info-value">'.$activityDate.'</div>
+            </div>
+            <div class="profile-info-box bio-box">
+                <b class="info-label">📝 '.T_('Bio').'</b>
+                <div class="info-value">'.(empty($row['bio']) ? '<span class="text-muted">'.T_('No biography provided yet.').'</span>' : cleanOutput($row['bio'])).'</div>
             </div>
         </div>';
 

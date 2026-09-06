@@ -147,15 +147,7 @@ class Profile
                     <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
                 </div>
             </div>
-            <div id="leftcolumn">
-                <ul class="menu">
-                    <li><a href="#section-name">'.T_('Name').'</a></li>
-                    <li><a href="#section-bio">'.T_('Bio').'</a></li>
-                    <li><a href="#section-gender">'.T_('Gender').'</a></li>
-                    <li><a href="#section-birthday">'.T_('Birthday').'</a></li>
-                </ul>
-            </div>
-            <div id="maincolumn">
+            <div id="maincolumn" class="full-width-column">
                 <script type="text/javascript" src="ui/js/livevalidation.js"></script>
                 <form id="frm" action="profile.php?view=info" method="post">
                 <fieldset id="section-name">

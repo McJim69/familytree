@@ -20,7 +20,7 @@ class FamilyTree
      *
      * @return void
      */
-    function FamilyTree ($fcmsError, $fcmsDatabase, $fcmsUser)
+    public function __construct ($fcmsError, $fcmsDatabase, $fcmsUser)
     {
         $this->fcmsError    = $fcmsError;
         $this->fcmsDatabase = $fcmsDatabase;

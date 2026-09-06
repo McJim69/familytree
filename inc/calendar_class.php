@@ -16,7 +16,7 @@ class Calendar
      * 
      * @return void
      */
-    function Calendar ($fcmsError, $fcmsDatabase, $fcmsUser)
+    public function __construct ($fcmsError, $fcmsDatabase, $fcmsUser)
     {
         $this->fcmsError       = $fcmsError;
         $this->fcmsDatabase    = $fcmsDatabase;

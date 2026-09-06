@@ -21,7 +21,7 @@ class Profile
      *
      * @return  void
      */
-    function Profile ($fcmsError, $fcmsDatabase, $fcmsUser, $fcmsFamilyTree, $fcmsAward, $fcmsAddressBook = null)
+    public function __construct ($fcmsError, $fcmsDatabase, $fcmsUser, $fcmsFamilyTree, $fcmsAward, $fcmsAddressBook = null)
     {
         $this->fcmsError       = $fcmsError;
         $this->fcmsDatabase    = $fcmsDatabase;

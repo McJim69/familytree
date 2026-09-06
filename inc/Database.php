@@ -78,7 +78,8 @@ class Database
                 $this->user, 
                 $this->pass, 
                 array(PDO::ATTR_PERSISTENT => true)
-            );  
+            );
+            $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
         }  
         catch (PDOException $e)
         {

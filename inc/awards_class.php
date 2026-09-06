@@ -22,7 +22,7 @@ class Awards
      * 
      * @return void
      */
-    function Awards ($fcmsError, $fcmsDatabase, $fcmsUser, $fcmsMessageBoard = null, $fcmsPhotoGallery = null)
+    public function __construct ($fcmsError, $fcmsDatabase, $fcmsUser, $fcmsMessageBoard = null, $fcmsPhotoGallery = null)
     {
         $this->fcmsError        = $fcmsError;
         $this->fcmsDatabase     = $fcmsDatabase;

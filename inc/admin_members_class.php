@@ -57,7 +57,7 @@ class AdminMembers
      * 
      * @return  void
      */
-    function AdminMembers ($fcmsError, $fcmsDatabase, $fcmsUser)
+    public function __construct ($fcmsError, $fcmsDatabase, $fcmsUser)
     {
         $this->fcmsError    = $fcmsError;
         $this->fcmsDatabase = $fcmsDatabase;

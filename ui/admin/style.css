@@ -1,68 +1,78 @@
-#page-header {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 15px 0;
-    margin-bottom: 18px;
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding-top: 0 !important;
 }
-h1, h2, h3, h4, h5 { margin-bottom: 9px; }
+.topbar {
+    background: #0f172a !important;
+    padding: 12px 0;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+.topbar .nav a {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+.topbar .nav a:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+.topbar .brand {
+    color: #818cf8 !important;
+    font-weight: 600;
+}
+#page-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 0;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+#page-header div {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; margin-bottom: 12px; }
 #pending div { margin-left: 20px; }
-.alert-message.block-message { background-color: #faffc0; }
+.alert-message.block-message { background-color: #fef9c3; border-color: #fde047; }
 .dashboard-links {
-    float: left;
-    width: 940px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding: 0;
 }
 .dashboard-links li {
-    float: left;
-    margin: 0 5px 10px 0;
+    margin: 0;
 }
 .dashboard-links li a {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    color: #777;
-    display: block;
-    font-weight: bold;
-    padding: 143px 15px 15px 15px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 130px 12px 16px 12px;
     text-align: center;
-    width: 151px;
-}
-/* http://www.webdesignerdepot.com/2009/07/200-free-exclusive-vector-icons-primo/ */
-.dashboard-links li.configuration a {
-    background: #eee url(../img/configuration.png) center 15px no-repeat;
-}
-.dashboard-links li.upgrade a {
-    background: #eee url(../img/backup.png) center 15px no-repeat;
-}
-.dashboard-links li.members a {
-    background: #eee url(../img/members.png) center 15px no-repeat;
-}
-.dashboard-links li.photogallery a {
-    background: #eee url(../img/photogallery.png) center 15px no-repeat;
-}
-.dashboard-links li.polls a {
-    background: #eee url(../img/polls.png) center 15px no-repeat;
-}
-.dashboard-links li.awards a {
-    background: #eee url(../img/awards.png) center 15px no-repeat;
-}
-.dashboard-links li.scheduler a {
-    background: #eee url(../img/scheduler.png) center 15px no-repeat;
-}
-/* http://www.iconfinder.com/search/?q=iconset%3AWPZOOM_Social_Networking_Icon_Set */
-.dashboard-links li.facebook a {
-    background: #eee url(../img/facebook.png) center 35px no-repeat;
-}
-.dashboard-links li.youtube a {
-    background: #eee url(../img/youtube.png) center 35px no-repeat;
-}
-.dashboard-links li.foursquare a {
-    background: #eee url(../img/foursquare.png) center 35px no-repeat;
-}
-.dashboard-links li.instagram a {
-    background: #eee url(../img/instagram.png) center 35px no-repeat;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    transition: all 0.2s ease;
 }
 .dashboard-links li a:hover {
-    background-color: #ddd;
-    border-color: #ccc;
+    background-color: #ffffff;
+    border-color: #6366f1;
+    color: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.15);
     text-decoration: none;
 }
 table .check {

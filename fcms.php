@@ -38,7 +38,7 @@ if ($fcmsError->hasError())
  * 
  * @return void
  */
-function __autoload ($className)
+spl_autoload_register(function ($className)
 {
     $classPaths = array(
         'Destination'                       => INC.'Upload/Destination.php',
@@ -78,7 +78,7 @@ function __autoload ($className)
             require_once($classPaths[$className]);
         }
     }
-}
+});
 
 /**
  * load 
@@ -178,7 +178,7 @@ function init ($dir = '')
  */
 function fixMagicQuotes ()
 {
-    if (get_magic_quotes_gpc())
+    if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
     {
         $_REQUEST = stripSlashesDeep($_REQUEST);
         $_GET     = stripSlashesDeep($_GET);
@@ -441,13 +441,13 @@ function isLoggedIn ()
     if (isset($_SESSION['fcms_id']))
     {
         $id    = (int)$_SESSION['fcms_id'];
-        $token = $_SESSION['fcms_token'];
+        $token = isset($_SESSION['fcms_token']) ? $_SESSION['fcms_token'] : '';
     }
     // User has a cookie
     elseif (isset($_COOKIE['fcms_cookie_id']))
     {
         $_SESSION['fcms_id']    = (int)$_COOKIE['fcms_cookie_id'];
-        $_SESSION['fcms_token'] = $_COOKIE['fcms_cookie_token'];
+        $_SESSION['fcms_token'] = isset($_COOKIE['fcms_cookie_token']) ? $_COOKIE['fcms_cookie_token'] : '';
 
         $id    = $_SESSION['fcms_id'];
         $token = $_SESSION['fcms_token'];
@@ -455,15 +455,15 @@ function isLoggedIn ()
     // User has nothing
     else
     {
-        $url = basename($_SERVER["REQUEST_URI"]);
+        $url = isset($_SERVER["REQUEST_URI"]) ? basename($_SERVER["REQUEST_URI"]) : 'home.php';
         header('Location: '.URL_PREFIX.'index.php?err=login&url='.URL_PREFIX.$url);
         exit();
     }
 
     // Make sure id is a number
-    if (!is_numeric($id))
+    if (!is_numeric($id) || $id <= 0)
     {
-        $url = basename($_SERVER["REQUEST_URI"]);
+        $url = isset($_SERVER["REQUEST_URI"]) ? basename($_SERVER["REQUEST_URI"]) : 'home.php';
         header('Location: '.URL_PREFIX.'index.php?err=login&url='.URL_PREFIX.$url);
         exit();
     }
@@ -480,14 +480,14 @@ function isLoggedIn ()
                 WHERE `name` = ?";
 
         $rows = $fcmsDatabase->getRows($sql, array($id, 'site_off'));
-        if ($rows === false)
+        if ($rows === false || count($rows) < 2)
         {
-            $error->displayError();
+            $fcmsError->displayError();
             return;
         }
 
-        $site_off = $rows[0]['val'];
-        $access   = $rows[1]['val'];
+        $access   = (int)$rows[0]['val'];
+        $site_off = (int)$rows[1]['val'];
 
         // Site is off and your not an admin
         if ($site_off == 1 && $access > 1)

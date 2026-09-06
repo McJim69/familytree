@@ -1,0 +1,187 @@
+2026-09-06 17:28:26 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+            FROM `fcms_user_settings`
+            WHERE `user` = ?
+            LIMIT 1
+  STACK
+    #0 require_once called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_user1_home.php:21]
+    #1 __construct called at [D:\Server\www\projects\familytree\home.php:29]
+    #2 control called at [D:\Server\www\projects\familytree\home.php:58]
+    #3 displayWhatsNew called at [D:\Server\www\projects\familytree\home.php:83]
+    #4 displayNewUserHome called at [D:\Server\www\projects\familytree\home.php:219]
+    #5 userConnectedSocialMedia called at [D:\Server\www\projects\familytree\inc\alerts_class.php:63]
+    #6 getYouTubeUserData called at [D:\Server\www\projects\familytree\inc\utils.php:4310]
+    #7 getRow called at [D:\Server\www\projects\familytree\inc\socialmedia.php:311]
+    #8 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #9 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:28:32 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `timezone` 
+            FROM `fcms_user_settings` 
+            WHERE `user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getTimezone called at [D:\Server\www\projects\familytree\members.php:139]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:3928]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:28:32 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT COUNT(*) AS comment 
+            FROM `fcms_gallery_photo_comment`, `fcms_news_comments`, `fcms_recipe_comment` 
+            WHERE `fcms_gallery_photo_comment`.`user` = '1' AND `fcms_news_comments`.`user` = '1' AND `fcms_recipe_comment`.`user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getUserParticipationPoints called at [D:\Server\www\projects\familytree\members.php:181]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:2012]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:28:56 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `timezone` 
+            FROM `fcms_user_settings` 
+            WHERE `user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getTimezone called at [D:\Server\www\projects\familytree\members.php:139]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:3928]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:28:56 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT COUNT(*) AS comment 
+            FROM `fcms_gallery_photo_comment`, `fcms_news_comments`, `fcms_recipe_comment` 
+            WHERE `fcms_gallery_photo_comment`.`user` = '1' AND `fcms_news_comments`.`user` = '1' AND `fcms_recipe_comment`.`user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getUserParticipationPoints called at [D:\Server\www\projects\familytree\members.php:181]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:2012]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:29:15 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `timezone` 
+            FROM `fcms_user_settings` 
+            WHERE `user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getTimezone called at [D:\Server\www\projects\familytree\members.php:139]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:3928]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:29:30 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `timezone` 
+            FROM `fcms_user_settings` 
+            WHERE `user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getTimezone called at [D:\Server\www\projects\familytree\members.php:139]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:3928]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 17:29:41 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [225]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `timezone` 
+            FROM `fcms_user_settings` 
+            WHERE `user` = '1'
+  STACK
+    #0 include called at [C:\Users\jcmcy\.gemini\antigravity-ide\brain\8ba37256-1006-4f64-9d0b-ba80070bbaab\scratch\test_all_pages.php:37]
+    #1 __construct called at [D:\Server\www\projects\familytree\members.php:13]
+    #2 control called at [D:\Server\www\projects\familytree\members.php:35]
+    #3 displayMembers called at [D:\Server\www\projects\familytree\members.php:47]
+    #4 getTimezone called at [D:\Server\www\projects\familytree\members.php:139]
+    #5 getRow called at [D:\Server\www\projects\familytree\inc\utils.php:3928]
+    #6 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #7 add called at [D:\Server\www\projects\familytree\inc\Database.php:226]
+
+ 

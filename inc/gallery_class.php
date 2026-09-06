@@ -17,7 +17,7 @@ class PhotoGallery
      * 
      * @return void
      */
-    function PhotoGallery ($fcmsError, $fcmsDatabase, $fcmsUser, $fcmsImage = null)
+    public function __construct ($fcmsError, $fcmsDatabase, $fcmsUser, $fcmsImage = null)
     {
         $this->fcmsError    = $fcmsError;
         $this->fcmsDatabase = $fcmsDatabase;

@@ -369,7 +369,7 @@ class Page
             return;
         }
 
-        if (count($rows) > 0)
+        if (!empty($rows) && is_array($rows))
         {
             $url     = getDomainAndDir();
             $headers = getEmailHeaders();
@@ -414,7 +414,7 @@ class Page
             return false;
         }
 
-        if (count($pollData) <= 0)
+        if (empty($pollData) || !is_array($pollData))
         {
             # we have no polls
             return array();

@@ -34,7 +34,7 @@ class Image
      * 
      * @return  void
      */
-    function Image ($currentUserId)
+    public function __construct ($currentUserId)
     {
         $this->currentUserId    = (int)$currentUserId;
         $this->error            = 0;

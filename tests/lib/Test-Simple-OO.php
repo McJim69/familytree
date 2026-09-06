@@ -102,7 +102,7 @@ class TestSimple {
         $skipinfo = '';
         if ($this->NumberOfTests === 'skip_all') $skipinfo = ' # '.$this->SkipAllReason;
 
-        echo "1..${NumberOfTests}${skipinfo}\n";
+        echo "1..{$NumberOfTests}{$skipinfo}\n";
         $this->NumberOfTests = $NumberOfTests;
 
         return;
@@ -223,7 +223,7 @@ class TestSimple {
     function web_output($callback = NULL) {
     // Basic web formatting (newlines) of output via ob filter
         if (isset($callback)) $this->Filter = $callback;
-        if (!isset($this->Filter)) $this->Filter = create_function('$string','$output = str_replace("\n","<br />\n",$string); return $output;');
+        if (!isset($this->Filter)) $this->Filter = function($string) { $output = str_replace("\n","<br />\n",$string); return $output; };
         ob_start($this->Filter);
     }
 

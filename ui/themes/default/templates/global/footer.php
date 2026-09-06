@@ -3,7 +3,7 @@
     </main><!--/#content-->
 
     <footer id="footer">
-        <div class="footer-inner">
+        <div class="footer-inner container">
             <div class="footer-links">
                 <a href="<?php echo $TMPL['path']; ?>index.php" class="ft"><?php echo T_pgettext('The beginning or starting place.', 'Home'); ?></a>
                 <a href="https://mcjim-server.com" class="ft" target="_blank"><?php echo T_('Support'); ?></a>

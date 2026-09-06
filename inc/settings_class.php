@@ -184,7 +184,7 @@ class Settings
         $sql = "SELECT `displayname`, `language`,
                     `dst`, `timezone`, `boardsort`, `frontpage`
                 FROM `fcms_user_settings`
-                WHERE `user` = '" . $this->fcmsUser->id . "'";
+                WHERE `user` = ?";
 
         $row = $this->fcmsDatabase->getRow($sql, $this->fcmsUser->id);
         if ($row === false)
@@ -321,7 +321,7 @@ class Settings
     {
         $sql = "SELECT `email_updates` 
                 FROM `fcms_user_settings`
-                WHERE `user` = '" . $this->fcmsUser->id . "'";
+                WHERE `user` = ?";
 
         $row = $this->fcmsDatabase->getRow($sql, $this->fcmsUser->id);
         if ($row === false)
@@ -452,7 +452,7 @@ class Settings
     {
         $sql = "SELECT `blogger`, `tumblr`, `wordpress`, `posterous`
                 FROM `fcms_user_settings`
-                WHERE `user` = '" . $this->fcmsUser->id . "'";
+                WHERE `user` = ?";
 
         $row = $this->fcmsDatabase->getRow($sql, $this->fcmsUser->id);
         if ($row === false)
@@ -536,7 +536,7 @@ class Settings
     {
         $sql = "SELECT `boardsort`
                 FROM `fcms_user_settings`
-                WHERE `user` = '".$this->fcmsUser->id."'";
+                WHERE `user` = ?";
 
         $row = $this->fcmsDatabase->getRow($sql, $this->fcmsUser->id);
         if ($row === false)

@@ -17,9 +17,14 @@
 
     <div class="topbar">
         <div class="fill">
-            <div class="container">
+            <div class="container admin-nav-container">
                 <a class="brand" href="../home.php"><?php echo '&laquo; '.T_('Back to Site'); ?></a>
-                <ul class="nav">
+                <button id="admin-menu-toggle" class="admin-mobile-toggle" aria-label="Toggle Admin Navigation">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <ul class="nav" id="admin-nav">
                     <li><a href="index.php"><?php echo T_('Dashboard'); ?></a></li>
                 <!--<li><a href="upgrade.php"><?php echo T_('Upgrade'); ?></a></li>-->
                     <li><a href="config.php"><?php echo T_('Configuration'); ?></a></li>
@@ -28,10 +33,48 @@
                     <li><a href="polls.php"><?php echo T_('Polls'); ?></a></li>
                     <li><a href="scheduler.php"><?php echo T_('Scheduler'); ?></a></li>
 					<li><a href="backup.php"><?php echo T_('Backup'); ?></a></li>
+                    <li>
+                        <button type="button" id="theme-toggle-btn" class="btn-theme-toggle" aria-label="Toggle Theme">
+                            <span class="theme-icon-sun">☀️ Light</span>
+                            <span class="theme-icon-moon">🌙 Dark</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    (function() {
+        var storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+    </script>
+
+    <script type="text/javascript">
+    if (typeof jQuery !== 'undefined') {
+        jQuery(document).ready(function($) {
+            $('#admin-menu-toggle').on('click', function(e) {
+                e.preventDefault();
+                $('#admin-nav').toggleClass('admin-nav-open');
+            });
+        });
+    } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('admin-menu-toggle');
+            var nav = document.getElementById('admin-nav');
+            if (btn && nav) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    nav.classList.toggle('admin-nav-open');
+                });
+            }
+        });
+    }
+    </script>
 
 <h1 id="page-header">
 	<div class="container"><?php echo $TMPL['pagetitle']; ?></div>

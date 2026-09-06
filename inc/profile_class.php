@@ -44,23 +44,22 @@ class Profile
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>
             <div id="sections_menu">
                 <ul>
-                    <li><a href="profile.php">'.T_('View Stats').'</a></li>
-                    <li><a href="?view=info">'.T_('Basic Information').'</a></li>
-                    <li><a href="?view=picture">'.T_('Profile Picture').'</a></li>
-                    <li><a href="?view=address">'.T_('Address / Contact').'</a></li>
+                    <li><a href="profile.php" class="active">📊 '.T_('View Stats').'</a></li>
+                    <li><a href="?view=info">👤 '.T_('Basic Information').'</a></li>
+                    <li><a href="?view=picture">🖼️ '.T_('Profile Picture').'</a></li>
+                    <li><a href="?view=address">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
+                <div id="actions_menu">
+                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                </div>
             </div>
-            <div id="actions_menu">
-                <ul>
-                    <li><a href="?member='.$this->fcmsUser->id.'">'.T_('View Profile').'</a></li>
-                </ul>
-            </div>
-            <div class="info-alert">
-                <h2>'.T_('Edit Profile').'</h2>
-                <p>'.T_('Use the links above to Edit the different sections of your profile.').'</p>
-            </div>
-            <h2>'.T_('Stats').'</h2>
-            <div id="stats">';
+            <div id="maincolumn" class="full-width-column">
+                <div class="info-alert">
+                    <h2>'.T_('Edit Profile').'</h2>
+                    <p>'.T_('Use the links above to Edit the different sections of your profile.').'</p>
+                </div>
+                <h2>'.T_('Stats').'</h2>
+                <div id="stats">';
 
         foreach ($stats as $stat)
         {
@@ -68,15 +67,18 @@ class Profile
         }
 
         echo '
+                </div>
             </div>
             <script type="text/javascript">
                 $(function() {
+                    var isDark = (document.documentElement.getAttribute("data-theme") === "dark");
                     $(".stat").easyPieChart({
                         animate     : false,
                         scaleColor  : false,
-                        barColor    : "#99CEF0",
-                        lineWidth   : 6,
-                        size        : 150
+                        barColor    : "#4f46e5",
+                        trackColor  : isDark ? "#334155" : "#e2e8f0",
+                        lineWidth   : 5,
+                        size        : 70
                     });
                 });
             </script>';
@@ -92,7 +94,7 @@ class Profile
         $sql = "SELECT `fname`, `mname`, `lname`, `maiden`, `bio`, `sex`, 
                     `dob_year`, `dob_month`, `dob_day`
                 FROM `fcms_users`
-                WHERE `id` = '".$this->fcmsUser->id."'";
+                WHERE `id` = ?";
 
         $row = $this->fcmsDatabase->getRow($sql, $this->fcmsUser->id);
         if ($row === false)
@@ -136,11 +138,14 @@ class Profile
         echo '
             <div id="sections_menu">
                 <ul>
-                    <li><a href="profile.php">'.T_('View Stats').'</a></li>
-                    <li><a href="?view=info">'.T_('Basic Information').'</a></li>
-                    <li><a href="?view=picture">'.T_('Profile Picture').'</a></li>
-                    <li><a href="?view=address">'.T_('Address / Contact').'</a></li>
+                    <li><a href="profile.php">📊 '.T_('View Stats').'</a></li>
+                    <li><a href="?view=info" class="active">👤 '.T_('Basic Information').'</a></li>
+                    <li><a href="?view=picture">🖼️ '.T_('Profile Picture').'</a></li>
+                    <li><a href="?view=address">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
+                <div id="actions_menu">
+                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                </div>
             </div>
             <div id="leftcolumn">
                 <ul class="menu">
@@ -247,16 +252,16 @@ class Profile
         echo '
             <div id="sections_menu">
                 <ul>
-                    <li><a href="profile.php">'.T_('View Stats').'</a></li>
-                    <li><a href="?view=info">'.T_('Basic Information').'</a></li>
-                    <li><a href="?view=picture">'.T_('Profile Picture').'</a></li>
-                    <li><a href="?view=address">'.T_('Address / Contact').'</a></li>
+                    <li><a href="profile.php">📊 '.T_('View Stats').'</a></li>
+                    <li><a href="?view=info">👤 '.T_('Basic Information').'</a></li>
+                    <li><a href="?view=picture" class="active">🖼️ '.T_('Profile Picture').'</a></li>
+                    <li><a href="?view=address">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
+                <div id="actions_menu">
+                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                </div>
             </div>
-            <div id="leftcolumn">
-                <br/>
-            </div>
-            <div id="maincolumn">';
+            <div id="maincolumn" class="full-width-column">';
 
         $profileClassName  = getProfileClassName();
         $profileClassName .= 'Form';
@@ -278,7 +283,7 @@ class Profile
     {
         $sql = "SELECT `id`
                 FROM `fcms_address`
-                WHERE `user` = '".$this->fcmsUser->id."'";
+                WHERE `user` = ?";
 
         $row = $this->fcmsDatabase->getRow($sql, $this->fcmsUser->id);
         if ($row === false)
@@ -293,16 +298,16 @@ class Profile
         echo '
             <div id="sections_menu">
                 <ul>
-                    <li><a href="profile.php">'.T_('View Stats').'</a></li>
-                    <li><a href="?view=info">'.T_('Basic Information').'</a></li>
-                    <li><a href="?view=picture">'.T_('Profile Picture').'</a></li>
-                    <li><a href="?view=address">'.T_('Address / Contact').'</a></li>
+                    <li><a href="profile.php">📊 '.T_('View Stats').'</a></li>
+                    <li><a href="?view=info">👤 '.T_('Basic Information').'</a></li>
+                    <li><a href="?view=picture">🖼️ '.T_('Profile Picture').'</a></li>
+                    <li><a href="?view=address" class="active">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
+                <div id="actions_menu">
+                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                </div>
             </div>
-            <div id="leftcolumn">
-                <br/>
-            </div>
-            <div id="maincolumn">';
+            <div id="maincolumn" class="full-width-column">';
 
         $this->fcmsAddressBook->displayEditForm($address_id, '', 'profile.php?view=address');
 

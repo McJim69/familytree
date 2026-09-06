@@ -1,46 +1,58 @@
-        <h2><?php echo $TMPL['textWhatsNew']; ?></h2>
+        <div class="feed-header-bar">
+            <h2 class="feed-title"><?php echo $TMPL['textWhatsNew']; ?></h2>
+            <a class="rss-btn" href="rss.php?feed=all">📡 <?php echo $TMPL['textRssFeed']; ?></a>
+        </div>
 
 <?php foreach ($TMPL['new'] as $new): ?>
     <?php if (isset($new['textDateHeading'])): ?>
-        <p><b><?php echo $new['textDateHeading']; ?></b></p>
+        <div class="feed-date-divider"><span><?php echo $new['textDateHeading']; ?></span></div>
     <?php else: ?>
-        <div id="<?php echo $new['position']; ?>" class="new <?php echo $new['class']; ?>">
-            <div class="avatar">
-                <img src="<?php echo $new['avatar']; ?>" alt="<?php echo $new['displayname']; ?>"/>
+        <div id="<?php echo $new['position']; ?>" class="feed-card <?php echo $new['class']; ?>">
+            <div class="feed-card-header">
+                <a class="feed-avatar-link" href="profile.php?member=<?php echo $new['userId']; ?>">
+                    <img class="feed-avatar" src="<?php echo $new['avatar']; ?>" alt="<?php echo $new['displayname']; ?>"/>
+                </a>
+                <div class="feed-user-meta">
+                    <a class="feed-username" href="profile.php?member=<?php echo $new['userId']; ?>"><?php echo $new['displayname']; ?></a>
+                    <span class="feed-timestamp"><?php echo $new['timeSince']; ?></span>
+                </div>
             </div>
-            <div class="info">
-                <a class="u" href="profile.php?member=<?php echo $new['userId']; ?>"><?php echo $new['displayname']; ?></a> &nbsp;- &nbsp;
-                <small><i><?php echo $new['timeSince']; ?></i></small>
-                <p><?php echo $new['textInfo']; ?></p>
+            
+            <div class="feed-card-body">
+                <div class="feed-info-text"><?php echo $new['textInfo']; ?></div>
 
         <?php if (isset($new['title']) && !empty($new['title'])): ?>
-                <div class="object">
-                    <h5><?php echo $new['title']; ?></h5>
-                    <?php echo $new['details']; ?>
+                <div class="feed-object-card">
+                    <h5 class="feed-object-title"><?php echo $new['title']; ?></h5>
+                    <div class="feed-object-details"><?php echo $new['details']; ?></div>
                 </div>
         <?php endif; ?>
 
-        <?php if (isset($new['children'])): ?>
+        <?php if (isset($new['children']) && !empty($new['children'])): ?>
+                <div class="feed-comments-container">
             <?php foreach ($new['children'] as $child): ?>
-                <div class="child <?php echo $child['class']; ?>">
-                    <div class="avatar">
-                        <img src="<?php echo $child['avatar']; ?>" alt="<?php echo $child['displayname']; ?>"/>
+                    <div class="feed-comment-item <?php echo $child['class']; ?>">
+                        <a href="profile.php?member=<?php echo $child['userId']; ?>">
+                            <img class="feed-comment-avatar" src="<?php echo $child['avatar']; ?>" alt="<?php echo $child['displayname']; ?>"/>
+                        </a>
+                        <div class="feed-comment-content">
+                            <div class="feed-comment-meta">
+                                <a class="feed-username" href="profile.php?member=<?php echo $child['userId']; ?>"><?php echo $child['displayname']; ?></a>
+                                <span class="feed-timestamp"><?php echo $child['timeSince']; ?></span>
+                            </div>
+                            <div class="feed-comment-text"><?php echo $child['textInfo']; ?></div>
+                        </div>
                     </div>
-                    <div class="info">
-                        <a class="u" href="profile.php?member=<?php echo $child['userId']; ?>"><?php echo $child['displayname']; ?></a> &nbsp;- &nbsp;
-                        <small><i><?php echo $child['timeSince']; ?></i></small>
-                        <p><?php echo $child['textInfo']; ?></p>
-                    </div>
-                </div>
             <?php endforeach; ?>
+                </div>
         <?php endif; ?>
 
         <?php if (isset($new['textReply'])): ?>
-                <div id="status_reply">
+                <div class="feed-reply-box">
                     <form method="post" action="home.php">
-                        <textarea id="status" name="status" placeholder="<?php echo $new['textReply']; ?>" title="<?php echo $new['textReply']; ?>"></textarea>
-                        <input type="hidden" id="parent" name="parent" value="<?php echo $new['replyParentId']; ?>"/>
-                        <input type="submit" id="status_submit" name="status_submit" value="<?php echo $new['textReply']; ?>"/>
+                        <input type="text" class="feed-reply-input" name="status" placeholder="<?php echo $new['textReply']; ?>..." title="<?php echo $new['textReply']; ?>"/>
+                        <input type="hidden" name="parent" value="<?php echo $new['replyParentId']; ?>"/>
+                        <button type="submit" class="feed-reply-btn" name="status_submit"><?php echo $new['textReply']; ?></button>
                     </form>
                 </div>
         <?php endif; ?>
@@ -50,6 +62,3 @@
     <?php endif; ?>
 <?php endforeach; ?>
 
-        <p class="alignright">
-            <a class="rss" href="rss.php?feed=all"><?php echo $TMPL['textRssFeed']; ?></a>
-        </p>

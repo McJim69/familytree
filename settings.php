@@ -261,21 +261,27 @@ class Page
 
         displayPageHeader($params, $options);
 
+        $currentView = isset($_GET['view']) ? $_GET['view'] : 'account';
+
         echo '
             <div id="leftcolumn">
-                <h3>'.T_('General Settings').'</h3>
-                <ul class="menu">
-                    <li><a href="?view=account">'.T_('Account').'</a></li>
-                    <li><a href="?view=theme">'.T_('Theme').'</a></li>
-                    <li><a href="?view=settings">'.T_('Settings').'</a></li>
-                    <li><a href="?view=notifications">'.T_('Notifications').'</a></li>
-                </ul>
-                <h3>'.T_('Plugin Settings').'</h3>
-                <ul class="menu">
-                    <li><a href="?view=photogallery">'.T_('Photo Gallery').'</a></li>
-                    <li><a href="?view=familynews">'.T_('Family News').'</a></li>
-                    <li><a href="?view=messageboard">'.T_('Message Board').'</a></li>
-                </ul>';
+                <div class="sidebar-block">
+                    <h3>'.T_('General Settings').'</h3>
+                    <ul class="menu sidebar-menu">
+                        <li><a href="?view=account" class="'.($currentView == 'account' ? 'active' : '').'">👤 '.T_('Account').'</a></li>
+                        <li><a href="?view=theme" class="'.($currentView == 'theme' ? 'active' : '').'">🎨 '.T_('Theme').'</a></li>
+                        <li><a href="?view=settings" class="'.($currentView == 'settings' ? 'active' : '').'">⚙️ '.T_('Settings').'</a></li>
+                        <li><a href="?view=notifications" class="'.($currentView == 'notifications' ? 'active' : '').'">🔔 '.T_('Notifications').'</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-block">
+                    <h3>'.T_('Plugin Settings').'</h3>
+                    <ul class="menu sidebar-menu">
+                        <li><a href="?view=photogallery" class="'.($currentView == 'photogallery' ? 'active' : '').'">🖼️ '.T_('Photo Gallery').'</a></li>
+                        <li><a href="?view=familynews" class="'.($currentView == 'familynews' ? 'active' : '').'">📰 '.T_('Family News').'</a></li>
+                        <li><a href="?view=messageboard" class="'.($currentView == 'messageboard' ? 'active' : '').'">💬 '.T_('Message Board').'</a></li>
+                    </ul>
+                </div>';
 
         $facebookConfig   = getFacebookConfigData();
         $foursquareConfig = getFoursquareConfigData();
@@ -289,39 +295,41 @@ class Page
 
         if (!empty($facebookConfig['fb_app_id']) && !empty($facebookConfig['fb_secret']))
         {
-            $facebookLink = '<li><a href="?view=facebook">Facebook</a></li>';
+            $facebookLink = '<li><a href="?view=facebook" class="'.($currentView == 'facebook' ? 'active' : '').'">📘 Facebook</a></li>';
         }
 
         if (!empty($foursquareConfig['fs_client_id']) && !empty($foursquareConfig['fs_client_secret']))
         {
-            $foursquareLink = '<li><a href="?view=foursquare">Foursquare</a></li>';
+            $foursquareLink = '<li><a href="?view=foursquare" class="'.($currentView == 'foursquare' ? 'active' : '').'">📍 Foursquare</a></li>';
         }
 
         if (!empty($instagramConfig['instagram_client_id']) && !empty($instagramConfig['instagram_client_secret']))
         {
-            $instagramLink = '<li><a href="?view=instagram">Instagram</a></li>';
+            $instagramLink = '<li><a href="?view=instagram" class="'.($currentView == 'instagram' ? 'active' : '').'">📷 Instagram</a></li>';
         }
 
         if (!empty($youtubeConfig['youtube_key']))
         {
-            $youtubeLink = '<li><a href="?view=youtube">YouTube</a></li>';
+            $youtubeLink = '<li><a href="?view=youtube" class="'.($currentView == 'youtube' ? 'active' : '').'">🎬 YouTube</a></li>';
         }
 
-        $picasaLink = '<li><a href="?view=picasa">Picasa</a></li>';
+        $picasaLink = '<li><a href="?view=picasa" class="'.($currentView == 'picasa' ? 'active' : '').'">🖼️ Picasa</a></li>';
 
         $links = "$facebookLink$foursquareLink$instagramLink$youtubeLink$picasaLink";
 
         if (!empty($links))
         {
             echo '
-                <h3>'.T_('Social Media').'</h3>
-                <ul class="menu">
-                    '.$facebookLink.'
-                    '.$foursquareLink.'
-                    '.$instagramLink.'
-                    '.$youtubeLink.'
-                    '.$picasaLink.'
-                </ul>';
+                <div class="sidebar-block">
+                    <h3>'.T_('Social Media').'</h3>
+                    <ul class="menu sidebar-menu">
+                        '.$facebookLink.'
+                        '.$foursquareLink.'
+                        '.$instagramLink.'
+                        '.$youtubeLink.'
+                        '.$picasaLink.'
+                    </ul>
+                </div>';
         }
 
         echo '

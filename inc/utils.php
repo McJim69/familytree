@@ -1570,8 +1570,7 @@ function getFamilyNewsById ($user_id, $option = 'both')
 
     $sql = "SELECT COUNT(`id`) AS c 
             FROM `fcms_news` 
-            WHERE `user` = ?
-            GROUP BY `user`";
+            WHERE `user` = ?";
 
     $row = $fcmsDatabase->getRow($sql, $user_id);
     if ($row === false)
@@ -1644,8 +1643,7 @@ function getRecipesById ($user_id, $option = 'both')
 
     $sql = "SELECT COUNT(`id`) AS c 
             FROM `fcms_recipes` 
-            WHERE `user` = ?
-            GROUP BY `user`";
+            WHERE `user` = ?";
 
     $row = $fcmsDatabase->getRow($sql, $user_id);
     if ($row === false)
@@ -1718,8 +1716,7 @@ function getDocumentsById ($user_id, $option = 'both')
 
     $sql = "SELECT COUNT(`id`) AS c 
             FROM `fcms_documents` 
-            WHERE `user` = ?
-            GROUP BY `user`";
+            WHERE `user` = ?";
 
     $row = $fcmsDatabase->getRow($sql, $user_id);
     if ($row === false)
@@ -1781,7 +1778,7 @@ function getPrayersById ($user_id, $option = 'both')
     $sql = "SELECT COUNT(`id`) AS c 
             FROM `fcms_prayers`";
 
-    $row = $fcmsDatabase->getRow($sql, $user_id);
+    $row = $fcmsDatabase->getRow($sql);
     if ($row === false)
     {
         $fcmsError->displayError();
@@ -1792,8 +1789,7 @@ function getPrayersById ($user_id, $option = 'both')
 
     $sql = "SELECT COUNT(`id`) AS c 
             FROM `fcms_prayers` 
-            WHERE `user` = ?
-            GROUP BY `user`";
+            WHERE `user` = ?";
 
     $row = $fcmsDatabase->getRow($sql, $user_id);
     if ($row === false)

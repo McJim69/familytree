@@ -1,4 +1,5 @@
-@media only screen and (max-width: 860px) {
+/* Mobile Navigation & Responsive Layout Breakpoint */
+@media only screen and (max-width: 768px) {
 
     body {
         width: 100%;
@@ -20,19 +21,20 @@
     }
     
     #mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
     }
     
     #navigation {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        background: #0f172a;
-        padding: 8px;
+        display: none !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        background: var(--bg-card, #0f172a) !important;
+        padding: 8px !important;
+        border-radius: 12px !important;
     }
     
     #navigation.open {
-        display: flex;
+        display: flex !important;
     }
     
     #navigation li.main {
@@ -57,7 +59,8 @@
     }
     
     #navigation li.main.dropdown:hover > ul.sub,
-    #navigation li.main.dropdown:focus-within > ul.sub {
+    #navigation li.main.dropdown:focus-within > ul.sub,
+    #navigation li.main.dropdown.active-dropdown > ul.sub {
         display: block;
     }
     
@@ -72,17 +75,21 @@
     }
 
     .centercontent {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column !important;
+        gap: 20px !important;
     }
     
     #leftcolumn {
-        width: 100%;
-        margin-right: 0;
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-right: 0 !important;
     }
     
     #maincolumn {
-        width: 100%;
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
     
     table, tr, td, th {

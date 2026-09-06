@@ -200,29 +200,35 @@ $(document).ready(function() {
                 echo '
             <div id="actions_menu">
                 <ul>
-                    <li><a href="profile.php">'.T_('Edit Profile').'</a></li>
+                    <li><a class="btn-profile-action" href="profile.php">⚙️ '.T_('Edit Profile').'</a></li>
                 </ul>
             </div>';
             }
 
+            $currentView = isset($_GET['view']) ? $_GET['view'] : '';
+
             echo '
             <div id="leftcolumn">
-                <h3>'.T_('Sections').'</h3>
-                <ul class="menu">
-                    <li><a href="?member='.$memberId.'">'.T_('Profile').'</a></li>
-                    <li><a href="?member='.$memberId.'&amp;view=awards">'.T_('Awards').'</a></li>
-                    <li><a href="?member='.$memberId.'&amp;view=contributions">'.T_('Contributions').'</a></li>
-                    <li><a href="?member='.$memberId.'&amp;view=participation">'.T_('Participation').'</a></li>
-                </ul>
-                <h3>'.T_('Quick Links').'</h3>
-                <ul class="menu">
-                    <li><a href="familynews.php?getnews='.$memberId.'">'.T_('Family News').'</a></li>
-                    <li><a href="familytree.php?view='.$memberId.'">'.T_('Family Tree').'</a></li>
-                    <li><a href="gallery/index.php?uid='.$memberId.'">'.T_('Photos').'</a></li>
-                    <li><a href="gallery/index.php?uid=0&cid='.$memberId.'">'.sprintf(T_pgettext('%s is the name of a person. Photos of Bill. etc.', 'Photos Of %s'), $row['fname']).'</a></li>
-                    <li><a href="video.php?u='.$memberId.'">'.T_('Videos').'</a></li>
-                    <li><a href="addressbook.php?cat=all&address='.$memberId.'">'.T_('Address').'</a></li>
-                </ul>
+                <div class="sidebar-block">
+                    <h3>'.T_('Sections').'</h3>
+                    <ul class="menu sidebar-menu">
+                        <li><a href="?member='.$memberId.'" class="'.(empty($currentView) && !isset($_GET['award']) ? 'active' : '').'">👤 '.T_('Profile').'</a></li>
+                        <li><a href="?member='.$memberId.'&amp;view=awards" class="'.($currentView == 'awards' ? 'active' : '').'">🏆 '.T_('Awards').'</a></li>
+                        <li><a href="?member='.$memberId.'&amp;view=contributions" class="'.($currentView == 'contributions' ? 'active' : '').'">📝 '.T_('Contributions').'</a></li>
+                        <li><a href="?member='.$memberId.'&amp;view=participation" class="'.($currentView == 'participation' ? 'active' : '').'">📊 '.T_('Participation').'</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-block">
+                    <h3>'.T_('Quick Links').'</h3>
+                    <ul class="menu sidebar-menu">
+                        <li><a href="familynews.php?getnews='.$memberId.'">📰 '.T_('Family News').'</a></li>
+                        <li><a href="familytree.php?view='.$memberId.'">🌳 '.T_('Family Tree').'</a></li>
+                        <li><a href="gallery/index.php?uid='.$memberId.'">🖼️ '.T_('Photos').'</a></li>
+                        <li><a href="gallery/index.php?uid=0&cid='.$memberId.'">📷 '.sprintf(T_pgettext('%s is the name of a person. Photos of Bill. etc.', 'Photos Of %s'), $row['fname']).'</a></li>
+                        <li><a href="video.php?u='.$memberId.'">🎬 '.T_('Videos').'</a></li>
+                        <li><a href="addressbook.php?cat=all&address='.$memberId.'">📇 '.T_('Address').'</a></li>
+                    </ul>
+                </div>
             </div><!-- /leftcolumn -->
 
             <div id="maincolumn">';
@@ -384,7 +390,7 @@ $(document).ready(function() {
 
         if ($hasPhone)
         {
-            $call = '<li><a class="call" href="tel:'.$tel.'">'.sprintf(T_pgettext('%s is the name of a person. Call Bob. etc.', 'Call %s'), $row['fname']).'</a></li>';
+            $call = '<li><a class="btn-profile-contact call" href="tel:'.$tel.'">📞 '.sprintf(T_pgettext('%s is the name of a person. Call Bob. etc.', 'Call %s'), $row['fname']).'</a></li>';
         }
 
         // Activity
@@ -399,61 +405,52 @@ $(document).ready(function() {
         $gender = $row['sex'] == 'M' ? T_('Male') : T_('Female');
 
         echo '
-                <div id="avatar">
-                    <h1><img class="avatar" src="'.getCurrentAvatar($memberId).'" alt="avatar"/></h1>
-                    '.$level.'
-                </div>
-                <div class="name-contacts">
-                    <h1>'.cleanOutput($row['fname']).' '.cleanOutput($row['lname']).'</h1>
-                    <h2>'.cleanOutput($row['username']).'</h2>
-                    <ul>
-                        '.$call.'
-                        <li><a class="email" href="mailto:'.$row['email'].'">'.T_('Send Email').'</a></li>
-                        <li><a class="pm" href="privatemsg.php?compose=new&amp;id='.$memberId.'">'.T_('Send Private Message').'</a></li>
-                    </ul>
-                </div>
-                <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <b>'.T_('Birthday').'</b>
-                                <div>'.$bday.' ('.sprintf(T_('%s years old'), $age).')</div>
-                            </li>
-                            <li>
-                                <b>'.T_('Gender').'</b>
-                                <div>'.$gender.'</div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>
-                                <b>'.T_('Location').'</b>
-                                <div>'.$address.'</div>
-                            </li>
-                            <li>
-                                <b>'.T_('Contact').'</b>
-                                <div>'.$contact.'</div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b>'.T_('Bio').'</b>
-                        <div>'.cleanOutput($row['bio']).'</div>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>
-                                <b>'.T_('Join Date').'</b>
-                                <div>'.$joinDate.'</div>
-                            </li>
-                            <li>
-                                <b>'.T_('Last Visit').'</b>
-                                <div>'.$activityDate.'</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>';
+        <div class="profile-hero-card">
+            <div id="avatar" class="profile-avatar-container">
+                <img class="avatar profile-avatar-img" src="'.getCurrentAvatar($memberId).'" alt="avatar"/>
+                <div class="user-level-badge">'.$level.'</div>
+            </div>
+            <div class="name-contacts">
+                <h1 class="profile-name">'.cleanOutput($row['fname']).' '.cleanOutput($row['lname']).'</h1>
+                <h2 class="profile-username">@'.cleanOutput($row['username']).'</h2>
+                <ul class="profile-actions-list">
+                    '.$call.'
+                    <li><a class="btn-profile-contact email" href="mailto:'.$row['email'].'">✉️ '.T_('Send Email').'</a></li>
+                    <li><a class="btn-profile-contact pm" href="privatemsg.php?compose=new&amp;id='.$memberId.'">💬 '.T_('Send Private Message').'</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="profile-info-cards">
+            <div class="profile-info-box">
+                <b class="info-label">🎂 '.T_('Birthday').'</b>
+                <div class="info-value">'.$bday.' ('.sprintf(T_('%s years old'), $age).')</div>
+            </div>
+            <div class="profile-info-box">
+                <b class="info-label">👤 '.T_('Gender').'</b>
+                <div class="info-value">'.$gender.'</div>
+            </div>
+            <div class="profile-info-box">
+                <b class="info-label">📍 '.T_('Location').'</b>
+                <div class="info-value">'.(empty($address) ? '<span class="text-muted">'.T_('Not specified').'</span>' : $address).'</div>
+            </div>
+            <div class="profile-info-box">
+                <b class="info-label">📞 '.T_('Contact').'</b>
+                <div class="info-value">'.(empty($contact) ? '<span class="text-muted">'.T_('No phone contacts listed').'</span>' : $contact).'</div>
+            </div>
+            <div class="profile-info-box bio-box">
+                <b class="info-label">📝 '.T_('Bio').'</b>
+                <div class="info-value">'.(empty($row['bio']) ? '<span class="text-muted">'.T_('No biography provided yet.').'</span>' : cleanOutput($row['bio'])).'</div>
+            </div>
+            <div class="profile-info-box">
+                <b class="info-label">📅 '.T_('Join Date').'</b>
+                <div class="info-value">'.$joinDate.'</div>
+            </div>
+            <div class="profile-info-box">
+                <b class="info-label">🕒 '.T_('Last Visit').'</b>
+                <div class="info-value">'.$activityDate.'</div>
+            </div>
+        </div>';
 
         $this->displayFooter($memberId);
     }
@@ -658,12 +655,14 @@ $(document).ready(function() {
             </div>
             <script type="text/javascript">
                 $(function() {
+                    var isDark = (document.documentElement.getAttribute("data-theme") === "dark");
                     $(".stat").easyPieChart({
                         animate     : false,
                         scaleColor  : false,
-                        barColor    : "#99CEF0",
+                        barColor    : "#4f46e5",
+                        trackColor  : isDark ? "#334155" : "#e2e8f0",
                         lineWidth   : 6,
-                        size        : 150
+                        size        : 90
                     });
                 });
             </script>';

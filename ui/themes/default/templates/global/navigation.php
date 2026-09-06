@@ -1,5 +1,5 @@
     <nav id="topmenu">
-        <div class="nav-container">
+        <div class="nav-container container">
             <button id="mobile-menu-toggle" aria-label="Toggle Navigation">
                 <span class="hamburger-icon"></span>
                 <span><?php echo T_('Menu');?></span>
@@ -54,6 +54,24 @@
         $('#mobile-menu-toggle').on('click', function(e) {
             e.preventDefault();
             $('#navigation').toggleClass('open');
+        });
+
+        // Click/touch toggle for dropdown menus on mobile devices
+        $('#navigation li.dropdown > a').on('click', function(e) {
+            if ($(window).width() <= 860) {
+                var $parentLi = $(this).parent('li');
+                if (!$parentLi.hasClass('active-dropdown')) {
+                    e.preventDefault();
+                    $('#navigation li.dropdown').not($parentLi).removeClass('active-dropdown');
+                    $parentLi.addClass('active-dropdown');
+                }
+            }
+        });
+
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('#navigation').length) {
+                $('#navigation li.dropdown').removeClass('active-dropdown');
+            }
         });
     });
     </script>

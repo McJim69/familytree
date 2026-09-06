@@ -3,6 +3,8 @@ session_start();
 
 require 'fcms.php';
 
+setLanguage();
+
 load('facebook', 'socialmedia', 'phpass');
 
 $page = new Page($fcmsError, $fcmsDatabase, $fcmsUser);
@@ -68,13 +70,18 @@ class Page
     function displayHeader ()
     {
         print '
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.T_pgettext('Language Code for this translation', 'lang').'" lang="'.T_pgettext('Language Code for this translation', 'lang').'">
+<!DOCTYPE html>
+<html lang="'.T_pgettext('Language Code for this translation', 'lang').'">
 <head>
 <title>'.sprintf(T_pgettext('%s is the name of the website', 'Register for %s'), getSiteName()).'</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="author" content="McJim Castillon Maata" />
-<link rel="stylesheet" type="text/css" href="ui/css/fcms-core.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="ui/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="ui/css/fcms-core.css?version=400"/>
 <script type="text/javascript" src="ui/js/jquery.js"></script>
 <script type="text/javascript" src="ui/js/livevalidation.js"></script>
 <script type="text/javascript">
@@ -93,9 +100,9 @@ function checkAvailability() {
             username : $("#username").val(),
         }
     })
-    .success (function (data) {
+    .done (function (data) {
         if (data === "available") {
-            $("#username").after("<span class=\"available\">'.T_('Available').'</span>");
+            $("#username").after("<span class=\"available\" style=\"color:#16a34a; font-weight:600; margin-left:8px;\">'.T_('Available').'</span>");
         }
         else if (data === "unavailable") {
             $("#username").addClass("LV_invalid_field");
@@ -105,7 +112,7 @@ function checkAvailability() {
             alert("'.T_('Could not check availability of username.').'");
         }
     })
-    .error (function() {
+    .fail (function() {
         alert("'.T_('There was an error with the connection.').'");
     });
 }

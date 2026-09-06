@@ -1,8 +1,16 @@
 /* =GENERAL =GLOBAL
 ------------------------------------------------*/
 
-// Mobile navigation
+// Mobile navigation & Theme Toggle
 $(document).ready(function() {
+    $(document).on('click', '#theme-toggle-btn', function(e) {
+        e.preventDefault();
+        var currentTheme = document.documentElement.getAttribute('data-theme');
+        var newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
     $("#mobile-topmenu").on('change', function(event) {
         window.location = $("#mobile-topmenu option:selected").val();
     });

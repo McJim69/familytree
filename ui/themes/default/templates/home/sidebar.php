@@ -1,55 +1,58 @@
             <div id="leftcolumn">
 
-                <h2 class="calmenu"><?php echo $TMPL['textCalendar']; ?></h2>
+                <div class="sidebar-block">
+                    <h3 class="calmenu"><?php echo $TMPL['textCalendar']; ?></h3>
 
-                <table id="small-calendar">
-                    <tr>
-                        <th colspan="7">
-                            <h3><a href="<?php $TMPL['thisMonthUrl']; ?>"><?php echo $TMPL['thisMonth']; ?></a></h3>
-                        </th>
-                    </tr>
-                    <tr>
-                <?php foreach ($TMPL['weekDays'] as $wd): ?>
-                        <td class="weekDays"><?php echo $wd; ?></td>
-                <?php endforeach; ?>
-                    </tr>
-
-                <?php foreach ($TMPL['days'] as $week => $days): ?>
-                    <tr>
-                    <?php foreach ($days as $day): ?>
-                        <td class="<?php echo $day['class']; ?>"><?php echo $day['data']; ?></td>
+                    <table id="small-calendar">
+                        <tr>
+                            <th colspan="7">
+                                <h3><a href="<?php echo $TMPL['thisMonthUrl']; ?>"><?php echo $TMPL['thisMonth']; ?></a></h3>
+                            </th>
+                        </tr>
+                        <tr>
+                    <?php foreach ($TMPL['weekDays'] as $wd): ?>
+                            <td class="weekDays"><?php echo $wd; ?></td>
                     <?php endforeach; ?>
-                    </tr>
-                <?php endforeach; ?>
-                </table>
-                
-                <h3><?php echo $TMPL['textUpcoming']; ?></h3>
+                        </tr>
 
-            <?php foreach ($TMPL['events'] as $event): ?>
-                <div class="events">
-                    <a title="<?php echo $event['desc']; ?>" href="calendar.php?event=<?php echo $event['id']; ?>">
-                        <?php echo $event['title']; ?>
-                    </a><br/>
-                    <?php echo $event['date']; ?>
-                </div>
-            <?php endforeach; ?>
+                    <?php foreach ($TMPL['days'] as $week => $days): ?>
+                        <tr>
+                        <?php foreach ($days as $day): ?>
+                            <td class="<?php echo $day['class']; ?>"><?php echo $day['data']; ?></td>
+                        <?php endforeach; ?>
+                        </tr>
+                    <?php endforeach; ?>
+                    </table>
+
+                    <h3><?php echo $TMPL['textUpcoming']; ?></h3>
+
+                <?php foreach ($TMPL['events'] as $event): ?>
+                    <div class="events">
+                        <a title="<?php echo $event['desc']; ?>" href="calendar.php?event=<?php echo $event['id']; ?>">
+                            <?php echo $event['title']; ?>
+                        </a><br/>
+                        <?php echo $event['date']; ?>
+                    </div>
+                <?php endforeach; ?>
+                </div><!--/.sidebar-block-->
 
             <?php if (isset($TMPL['pollId'])): ?>
-                <h2 class="pollmenu"><?php echo $TMPL['textPolls']; ?></h2>
-                <?php
-                if (isset($TMPL['pollOptions']))
-                {
-                    require_once 'ui/themes/default/templates/poll/view.php';
-                }
-                else
-                {
-                    require_once 'ui/themes/default/templates/poll/result.php';
-                } ?>
+                <div class="sidebar-block">
+                    <h3 class="pollmenu"><?php echo $TMPL['textPolls']; ?></h3>
+                    <?php
+                    if (isset($TMPL['pollOptions']))
+                    {
+                        require_once 'ui/themes/default/templates/poll/view.php';
+                    }
+                    else
+                    {
+                        require_once 'ui/themes/default/templates/poll/result.php';
+                    } ?>
+                </div><!--/.sidebar-block-->
             <?php endif; ?>
 
-                <h2 class="membermenu"><?php echo $TMPL['textMembersOnline']; ?></h2>
-                <div class="membermenu">
-                    <h3><?php echo $TMPL['textLastSeen']; ?>:</h3>
+                <div class="sidebar-block">
+                    <h3 class="membermenu"><?php echo $TMPL['textMembersOnline']; ?></h3>
                     <ul class="avatar-member-list">
             <?php if (isset($TMPL['membersOnline'])): ?>
                 <?php foreach ($TMPL['membersOnline'] as $member): ?>
@@ -65,8 +68,7 @@
                 <?php endforeach; ?>
             <?php endif; ?>
                     </ul>
-                    <br/><br/>
-                </div>
+                </div><!--/.sidebar-block-->
 
             </div><!--/#leftcolumn-->
 

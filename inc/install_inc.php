@@ -18,6 +18,8 @@ function dropTables ()
     mysql_query("DROP TABLE IF EXISTS `fcms_navigation`")               or die("fcms_navigation<br/>" . mysql_error());
     mysql_query("DROP TABLE IF EXISTS `fcms_chat_online`")              or die("fcms_chat_oneline<br/>" . mysql_error());
     mysql_query("DROP TABLE IF EXISTS `fcms_chat_messages`")            or die("fcms_chat_messages<br/>" . mysql_error());
+    mysql_query("DROP TABLE IF EXISTS `fcms_chat_bans`")                or die("fcms_chat_bans<br/>" . mysql_error());
+    mysql_query("DROP TABLE IF EXISTS `fcms_chat_invitations`")          or die("fcms_chat_invitations<br/>" . mysql_error());
     mysql_query("DROP TABLE IF EXISTS `fcms_address`")                  or die("fcms_address<br/>" . mysql_error());
     mysql_query("DROP TABLE IF EXISTS `fcms_alerts`")                   or die("fcms_alerts<br/>" . mysql_error());
     mysql_query("DROP TABLE IF EXISTS `fcms_privatemsg`")               or die("fcms_privatemsg<br/>" . mysql_error());
@@ -913,6 +915,25 @@ function installTables ()
                 ip VARBINARY(16) NOT NULL,
                 text TEXT,
                 PRIMARY KEY (id)
+            ) DEFAULT CHARSET=utf8 COLLATE=utf8_bin";
+    mysql_query($sql) or die("$sql<br/>".mysql_error());
+
+    // create fcms_chat_bans
+    $sql = "CREATE TABLE fcms_chat_bans (
+                userID INT(11) NOT NULL,
+                userName VARCHAR(64) NOT NULL,
+                dateTime DATETIME NOT NULL,
+                ip VARBINARY(16) NOT NULL,
+                PRIMARY KEY (userID)
+            ) DEFAULT CHARSET=utf8 COLLATE=utf8_bin";
+    mysql_query($sql) or die("$sql<br/>".mysql_error());
+
+    // create fcms_chat_invitations
+    $sql = "CREATE TABLE fcms_chat_invitations (
+                userID INT(11) NOT NULL,
+                channel INT(11) NOT NULL,
+                dateTime DATETIME NOT NULL,
+                PRIMARY KEY (userID, channel)
             ) DEFAULT CHARSET=utf8 COLLATE=utf8_bin";
     mysql_query($sql) or die("$sql<br/>".mysql_error());
 

@@ -242,31 +242,37 @@ function openChat (path)
     return false;
 }
 
-// Create the chat bar
+// Create the modern floating chat launcher bar
 function initChatBar(txt, path)
 {
-    var footer   = $('#footer');
+    var body     = $('body');
     var linkText = txt + ' (0)';
     var time     = 2000;
     var chatLink = '<a href="#" id="chat_bar" class="chat_bar" '
                  + 'onclick="window.open(\'' + path + 'inc/chat/index.php\', \'chat\', '
-                 + '\'width=750,height=550,scrollbars=yes,resizable=yes,location=no,menubar=no,status=no\'); return false;">' + linkText + '</a>';
+                 + '\'width=850,height=600,scrollbars=yes,resizable=yes,location=no,menubar=no,status=no\'); return false;">'
+                 + '<span class="chat-bar-pulse"></span>'
+                 + '<svg class="chat-bar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>'
+                 + '<span class="chat-bar-label">' + linkText + '</span>'
+                 + '</a>';
 
-    $(chatLink).appendTo(footer);
+    if ($('#chat_bar').length === 0) {
+        $(chatLink).appendTo(body);
+    }
 
     (function worker() {
         $.ajax({
             type :  'GET',
-            url  :  path + 'inc/chat/whoisonline.php',
+            url  :  path + 'inc/chat/whoisonline.php'
         })
-        .success (function (data) {
+        .done (function (data) {
             if (data === linkText) {
                 time = time * 1.2;
             }
             else {
                 time = 2000;
             }
-            $('#chat_bar').text(data);
+            $('#chat_bar .chat-bar-label').text(data);
 
             setTimeout(worker, time);
             linkText = data;

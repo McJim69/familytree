@@ -12,5 +12,3 @@
 $incPath = dirname(dirname(dirname(__FILE__))) . '/';
 require_once $incPath.'config_inc.php';
 
-$connection = mysql_connect($cfg_mysql_host, $cfg_mysql_user, $cfg_mysql_pass);
-mysql_select_db($cfg_mysql_db);

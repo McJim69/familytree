@@ -137,7 +137,7 @@ class Page
             <div class="span4">
                 <h2>'.T_('Step 1').'</h2>
                 <p>
-                    '.T_('Got to Facebook and create a new Application.').'
+                    '.T_('Go to Facebook and create a new Application.').'
                 </p>
             </div>
             <div class="span12">

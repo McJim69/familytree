@@ -276,7 +276,41 @@ CREATE TABLE IF NOT EXISTS `fcms_chat_online` (
   `userRole` int(1) NOT NULL,
   `channel` int(11) NOT NULL,
   `dateTime` datetime NOT NULL,
-  `ip` varbinary(16) NOT NULL
+  `ip` varbinary(16) NOT NULL,
+  PRIMARY KEY (`userID`),
+  KEY `userName` (`userName`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fcms_chat_bans`
+--
+
+DROP TABLE IF EXISTS `fcms_chat_bans`;
+CREATE TABLE IF NOT EXISTS `fcms_chat_bans` (
+  `userID` int(11) NOT NULL,
+  `userName` varchar(64) COLLATE utf8_bin NOT NULL,
+  `dateTime` datetime NOT NULL,
+  `ip` varbinary(16) NOT NULL,
+  PRIMARY KEY (`userID`),
+  KEY `userName` (`userName`),
+  KEY `dateTime` (`dateTime`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fcms_chat_invitations`
+--
+
+DROP TABLE IF EXISTS `fcms_chat_invitations`;
+CREATE TABLE IF NOT EXISTS `fcms_chat_invitations` (
+  `userID` int(11) NOT NULL,
+  `channel` int(11) NOT NULL,
+  `dateTime` datetime NOT NULL,
+  PRIMARY KEY (`userID`,`channel`),
+  KEY `dateTime` (`dateTime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------

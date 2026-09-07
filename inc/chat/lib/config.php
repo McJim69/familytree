@@ -38,8 +38,8 @@ $config['dbConnection']['link'] = null;
 $config['dbTableNames'] = array();
 $config['dbTableNames']['online']		= 'fcms_chat_online';
 $config['dbTableNames']['messages']		= 'fcms_chat_messages';
-$config['dbTableNames']['bans']			= 'fcms_chat_online';
-$config['dbTableNames']['invitations']	= 'fcms_chat_online';
+$config['dbTableNames']['bans']			= 'fcms_chat_bans';
+$config['dbTableNames']['invitations']	= 'fcms_chat_invitations';
 
 // Available languages:
 $config['langAvailable'] = array(

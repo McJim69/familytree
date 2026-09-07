@@ -15,7 +15,7 @@ class CustomAJAXChat extends AJAXChat {
 		
         if (!isset($_SESSION['fcms_id']))
         {
-            die('NOT LOGGED IN');
+            return null;
         }
 
         $currentUserId = (int)$_SESSION['fcms_id'];
@@ -122,20 +122,26 @@ class CustomAJAXChat extends AJAXChat {
                  . "FROM `fcms_users` "
                  . "WHERE `id` = '$userid' ";
         }
-        $result = mysql_query($sql) or displaySQLError(
-            'Displayname Error', __FILE__ . ' [' . __LINE__ . ']', $sql, mysql_error()
-        );
-        $r = mysql_fetch_array($result);
+        $result = $this->db->sqlQuery($sql);
+        if ($result->error()) {
+            echo $result->getError();
+            die();
+        }
+        $r = $result->fetch();
+
+        if (!$r) {
+            return 'Guest';
+        }
 
         // Do we want user's settings or overriding it?
         if ($display < 1) {
-            $displayname = $r['displayname'];
+            $displayname = isset($r['displayname']) ? $r['displayname'] : 0;
         } else {
             $displayname = $display;
         }
-        switch($displayname) {
+        switch((string)$displayname) {
             case '1': return $r['fname']; break;
-            case '2': return $r['fname'].' '.$r['lname']; break;
+            case '2': return trim($r['fname'].' '.$r['lname']); break;
             case '3': return $r['username']; break;
             default: return $r['username']; break;
         }
@@ -156,10 +162,12 @@ class CustomAJAXChat extends AJAXChat {
         $sql = "SELECT `access` 
                 FROM `fcms_users` 
                 WHERE `id` = '$userid'";
-        $result = mysql_query($sql) or displaySQLError(
-            'Access Error', __FILE__ . ' [' . __LINE__ . ']', $sql, mysql_error()
-        );
-        $r = mysql_fetch_array($result);
-        return $r['access'];
+        $result = $this->db->sqlQuery($sql);
+        if ($result->error()) {
+            echo $result->getError();
+            die();
+        }
+        $r = $result->fetch();
+        return isset($r['access']) ? (int)$r['access'] : 0;
     }
 }

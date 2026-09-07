@@ -33,8 +33,8 @@
 
 <style>
 .backup-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
+    background: var(--admin-card-bg);
+    border: 1px solid var(--admin-border);
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 24px;
@@ -44,10 +44,10 @@
     margin-top: 0;
     font-size: 18px;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--admin-text);
 }
 .backup-card p {
-    color: #64748b;
+    color: var(--admin-text-muted);
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -58,7 +58,7 @@
     align-items: center;
 }
 .btn-modern-primary {
-    background-color: #4f46e5;
+    background-color: var(--admin-accent);
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -88,8 +88,8 @@
     color: #ffffff;
 }
 .console-box {
-    background: #0f172a;
-    color: #38bdf8;
+    background: var(--admin-card-bg);
+    color: var(--admin-text);
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
     line-height: 1.5;
@@ -98,18 +98,19 @@
     margin-top: 24px;
     max-height: 450px;
     overflow-y: auto;
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+    border: 1px solid var(--admin-border);
 }
 .console-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid var(--admin-border);
     padding-bottom: 10px;
     margin-bottom: 12px;
 }
 .console-title {
-    color: #94a3b8;
+    color: var(--admin-text-muted);
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
@@ -137,12 +138,26 @@
                     <li><a href="polls.php">Polls</a></li>
                     <li><a href="scheduler.php">Scheduler</a></li>
 					<li class="active"><a href="backup.php">Backup</a></li>
+                    <li>
+                        <button type="button" id="theme-toggle-btn" class="btn-theme-toggle" aria-label="Toggle Theme">
+                            <span class="theme-icon-sun">☀️ Light</span>
+                            <span class="theme-icon-moon">🌙 Dark</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
+    (function() {
+        var storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
     document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('admin-menu-toggle');
         var nav = document.getElementById('admin-nav');
@@ -150,6 +165,17 @@
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 nav.classList.toggle('admin-nav-open');
+            });
+        }
+        var themeBtn = document.getElementById('theme-toggle-btn');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var currentTheme = document.documentElement.getAttribute('data-theme');
+                var newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
             });
         }
     });

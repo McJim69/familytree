@@ -45,8 +45,71 @@ body {
 [data-theme="dark"] h2, 
 [data-theme="dark"] h3, 
 [data-theme="dark"] h4,
+[data-theme="dark"] label,
+[data-theme="dark"] legend,
 [data-theme="dark"] .dash-tile-title {
     color: var(--admin-text) !important;
+}
+
+[data-theme="dark"] .actions {
+    background-color: var(--admin-card-bg) !important;
+    border-color: var(--admin-border) !important;
+}
+
+[data-theme="dark"] pre {
+    background-color: #0f172a !important;
+    color: var(--admin-accent) !important;
+    border-color: var(--admin-border) !important;
+}
+
+[data-theme="dark"] .alert-message,
+[data-theme="dark"] .alert {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: var(--admin-text) !important;
+    text-shadow: none !important;
+}
+
+[data-theme="dark"] .alert-message h1,
+[data-theme="dark"] .alert-message h2,
+[data-theme="dark"] .alert-message h3,
+[data-theme="dark"] .alert-message h4,
+[data-theme="dark"] .alert h1,
+[data-theme="dark"] .alert h2,
+[data-theme="dark"] .alert h3,
+[data-theme="dark"] .alert h4 {
+    color: var(--admin-accent) !important;
+}
+
+/* Theme Toggle Button */
+.btn-theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+.btn-theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+[data-theme="dark"] .theme-icon-sun {
+    display: inline;
+}
+[data-theme="dark"] .theme-icon-moon {
+    display: none;
+}
+[data-theme="light"] .theme-icon-sun, html:not([data-theme]) .theme-icon-sun {
+    display: none;
+}
+[data-theme="light"] .theme-icon-moon, html:not([data-theme]) .theme-icon-moon {
+    display: inline;
 }
 
 /* Container & Fluid Wrapper */

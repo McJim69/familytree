@@ -29,6 +29,11 @@
 <link href="../ui/admin/style.css?version=402" rel="stylesheet"/>
 
 <style>
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -37,8 +42,8 @@
     margin-bottom: 40px;
 }
 .dash-tile {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
+    background: var(--admin-card-bg);
+    border: 1px solid var(--admin-border);
     border-radius: 16px;
     padding: 24px 16px;
     display: flex;
@@ -52,7 +57,7 @@
     overflow: hidden;
 }
 .dash-tile:hover {
-    border-color: #6366f1;
+    border-color: var(--admin-accent);
     transform: translateY(-4px);
     box-shadow: 0 12px 24px -6px rgba(99, 102, 241, 0.18);
 }
@@ -70,29 +75,29 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 15px;
-    color: #1e293b;
+    color: var(--admin-text);
     text-align: center;
     transition: color 0.2s ease;
 }
 .dash-tile:hover .dash-tile-title {
-    color: #4f46e5;
+    color: var(--admin-accent);
 }
 .admin-footer {
-    background: #0f172a;
-    color: #94a3b8;
+    background: var(--admin-bg);
+    color: var(--admin-text-muted);
     text-align: center;
     padding: 20px 0;
-    margin-top: 60px;
-    border-top: 1px solid #1e293b;
+    margin-top: auto;
+    border-top: 1px solid var(--admin-border);
     font-size: 14px;
 }
 .admin-footer a {
-    color: #818cf8;
+    color: var(--admin-accent);
     text-decoration: none;
     font-weight: 600;
 }
 .admin-footer a:hover {
-    color: #c7d2fe;
+    color: var(--admin-text);
 }
 </style>
 
@@ -117,12 +122,26 @@
                     <li><a href="polls.php">Polls</a></li>
                     <li><a href="scheduler.php">Scheduler</a></li>
 					<li><a href="backup.php">Backup</a></li>
+                    <li>
+                        <button type="button" id="theme-toggle-btn" class="btn-theme-toggle" aria-label="Toggle Theme">
+                            <span class="theme-icon-sun">☀️ Light</span>
+                            <span class="theme-icon-moon">🌙 Dark</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
+    (function() {
+        var storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
     document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('admin-menu-toggle');
         var nav = document.getElementById('admin-nav');
@@ -130,6 +149,17 @@
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 nav.classList.toggle('admin-nav-open');
+            });
+        }
+        var themeBtn = document.getElementById('theme-toggle-btn');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var currentTheme = document.documentElement.getAttribute('data-theme');
+                var newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
             });
         }
     });

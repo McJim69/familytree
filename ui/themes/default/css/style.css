@@ -6242,12 +6242,10 @@ textarea.LV_invalid_field:active {
 /* Modern Profile Section Styles */
 #sections_menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 16px;
-  width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
   margin-bottom: 24px;
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 12px;
@@ -6662,12 +6660,11 @@ input[type="submit"]:hover,
 #sections_menu {
   display: flex !important;
   flex-direction: row !important;
-  justify-content: space-between !important;
   align-items: center !important;
   flex-wrap: wrap !important;
   gap: 16px !important;
-  width: 100% !important;
-  flex: 0 0 100% !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
   margin: 16px 0 28px 0 !important;
   padding-bottom: 16px !important;
   border-bottom: 2px solid var(--border-color, #e2e8f0) !important;
@@ -8113,6 +8110,60 @@ h1, h2, h3, h4, h5, h6, .pagetitle {
     flex-wrap: wrap !important;
     justify-content: center !important;
   }
+}
+
+/* 4. Family Tree Dark Mode Fixes */
+[data-theme="dark"] .tree div.person.m {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+}
+[data-theme="dark"] .tree div.person.f {
+  background-color: rgba(236, 72, 153, 0.15) !important;
+  border-color: rgba(236, 72, 153, 0.4) !important;
+}
+[data-theme="dark"] .tree li a.m:hover,
+[data-theme="dark"] .tree li a:hover + ul li a.m,
+[data-theme="dark"] .tree li a:hover + .p1 a.m {
+  background-color: rgba(59, 130, 246, 0.3) !important;
+}
+[data-theme="dark"] .tree li a.f:hover,
+[data-theme="dark"] .tree li a:hover + ul li a.f,
+[data-theme="dark"] .tree li a:hover + .p1 a.f {
+  background-color: rgba(236, 72, 153, 0.3) !important;
+}
+/* Tree connector lines in dark mode */
+[data-theme="dark"] .tree li::before,
+[data-theme="dark"] .tree li::after,
+[data-theme="dark"] .tree ul ul.c::before,
+[data-theme="dark"] .tree li li:only-child::before,
+[data-theme="dark"] .tree li li:last-child::before {
+  border-color: rgba(255,255,255,0.2) !important;
+}
+
+/* 5. Add Relative Menu (Popup Modal) Dark Mode Fixes */
+[data-theme="dark"] #add_relative_menu {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  color: var(--text-main) !important;
+}
+[data-theme="dark"] #add_relative_menu li.header {
+  color: var(--text-main) !important;
+}
+[data-theme="dark"] #add_relative_menu li a {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  color: #60a5fa !important;
+}
+[data-theme="dark"] #add_relative_menu li a:hover {
+  background-color: var(--primary-accent) !important;
+  color: #ffffff !important;
+}
+[data-theme="dark"] #add_relative_menu li.close {
+  color: var(--text-muted) !important;
+}
+[data-theme="dark"] #add_relative_menu li.close:hover {
+  color: #ffffff !important;
 }
 
 

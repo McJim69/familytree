@@ -1534,9 +1534,8 @@ class Calendar
 
                     <p>
                         <input type="hidden" id="date" name="date" value="'.$addDate.'"/> 
-                        <input class="sub1" type="submit" name="add" value="'.T_('Add').'"/> 
-                        '.T_('or').'&nbsp;
-                        <a href="calendar.php?year='.$year.'&amp;month='.$month.'&amp;day='.$day.'">'.T_('Cancel').'</a>
+                        <input class="sub1" type="submit" name="add" value="'.T_('Add').'"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php?year='.$year.'&amp;month='.$month.'&amp;day='.$day.'">'.T_('Cancel').'</a>
                     </p>
                 </form>
             </fieldset>';
@@ -1706,9 +1705,8 @@ class Calendar
                     <p>
                         <input type="hidden" name="id" value="'.$id.'"/>
                         <input class="sub1" type="submit" name="edit" value="'.T_('Edit').'"/> 
-                        <input class="sub2" type="submit" id="delcal" name="delete" value="'.T_('Delete').'"/>
-                        '.T_('or').'&nbsp;
-                        <a href="calendar.php?year='.$year.'&amp;month='.$month.'&amp;day='.$day.'">'.T_('Cancel').'</a>
+                        <input class="sub2" type="submit" id="delcal" name="delete" value="'.T_('Delete').'"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php?year='.$year.'&amp;month='.$month.'&amp;day='.$day.'">'.T_('Cancel').'</a>
                     </p>
                 </form>
             </fieldset>';
@@ -2137,18 +2135,16 @@ class Calendar
                     <p>
                         <input type="hidden" id="id" name="id" value="'.$id.'"/> 
                         <input class="sub1" type="submit" id="editcat" name="editcat" value="'.T_('Edit').'"/> 
-                        <input class="sub2" type="submit" id="delcat" name="delcat" value="'.T_('Delete').'"/>
-                        '.T_('or').' &nbsp;
-                        <a href="calendar.php">'.T_('Cancel').'</a>
+                        <input class="sub2" type="submit" id="delcat" name="delcat" value="'.T_('Delete').'"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php">'.T_('Cancel').'</a>
                     </p>';
         }
         else
         {
             echo '
                     <p>
-                        <input class="sub1" type="submit" id="addcat" name="addcat" value="'.T_('Add').'"/>
-                        '.T_('or').' &nbsp;
-                        <a href="calendar.php">'.T_('Cancel').'</a>
+                        <input class="sub1" type="submit" id="addcat" name="addcat" value="'.T_('Add').'"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php">'.T_('Cancel').'</a>
                     </p>';
         }
         echo '

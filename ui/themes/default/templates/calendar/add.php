@@ -88,9 +88,8 @@
 
                     <p>
                         <input type="hidden" id="date" name="date" value="<?php echo $TMPL['addDate']; ?>"/> 
-                        <input class="sub1" type="submit" name="add" value="<?php echo $TMPL['addText']; ?>"/> 
-                        <?php echo $TMPL['orText']; ?>&nbsp;
-                        <a href="<?php echo $TMPL['cancelUrl']; ?>"><?php echo $TMPL['cancelText']; ?></a>
+                        <input class="sub1" type="submit" name="add" value="<?php echo $TMPL['addText']; ?>"/> &nbsp;
+                        <a class="sub1 secondary" href="<?php echo $TMPL['cancelUrl']; ?>"><?php echo $TMPL['cancelText']; ?></a>
                     </p>
                 </form>
             </fieldset>

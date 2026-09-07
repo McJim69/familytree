@@ -107,9 +107,8 @@
                     <p>
                         <input type="hidden" name="id" value="<?php echo $TMPL['id']; ?>"/>
                         <input class="sub1" type="submit" name="edit" value="<?php echo $TMPL['editText']; ?>"/> 
-                        <input class="sub2" type="submit" id="delcal" name="delete" value="<?php echo $TMPL['deleteText']; ?>"/>
-                        <?php echo $TMPL['orText']; ?>&nbsp;
-                        <a href="<?php echo $TMPL['cancelUrl']; ?>"><?php echo $TMPL['cancelText']; ?></a>
+                        <input class="sub2" type="submit" id="delcal" name="delete" value="<?php echo $TMPL['deleteText']; ?>"/> &nbsp;
+                        <a class="sub1 secondary" href="<?php echo $TMPL['cancelUrl']; ?>"><?php echo $TMPL['cancelText']; ?></a>
                     </p>
                 </fieldset>
             </form>

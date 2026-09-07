@@ -20,9 +20,8 @@
                     <p>
                         <input type="hidden" name="id" value="<?php echo $TMPL['id']; ?>"/>
                         <input type="hidden" name="user" value="<?php echo $TMPL['user']; ?>"/>
-                        <input class="sub1" type="submit" name="submitedit" tabindex="3" value="<?php echo $TMPL['editText']; ?>"/>
-                         &nbsp;<?php echo $TMPL['orText']; ?> &nbsp;
-                        <a href="familynews.php"><?php echo $TMPL['cancelText']; ?></a>
+                        <input class="sub1" type="submit" name="submitedit" tabindex="3" value="<?php echo $TMPL['editText']; ?>"/> &nbsp;
+                        <a class="sub1 secondary" href="familynews.php"><?php echo $TMPL['cancelText']; ?></a>
                     </p>
                 </fieldset>
             </form>

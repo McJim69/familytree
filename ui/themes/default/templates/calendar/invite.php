@@ -37,9 +37,8 @@
                     <textarea name="non-member-emails" id="non-member-emails" rows="10" cols="63"></textarea>
                     <p style="clear:both">
                         <input type="hidden" name="calendar" value="<?php echo $TMPL['calendarId']; ?>"/>
-                        <input class="sub1" type="submit" id="submit-invite" name="submit-invite" value="<?php echo T_('Send Invitations'); ?>"/> 
-                        <?php echo T_('or'); ?>&nbsp;
-                        <a href="calendar.php"><?php echo T_('Cancel'); ?></a>
+                        <input class="sub1" type="submit" id="submit-invite" name="submit-invite" value="<?php echo T_('Send Invitations'); ?>"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php"><?php echo T_('Cancel'); ?></a>
                     </p>
                 </fieldset>
             </form>

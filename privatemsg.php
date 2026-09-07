@@ -217,7 +217,7 @@ class Page
                     </script>
                     <p>
                         <input class="sub1" type="submit" name="submit" value="'.T_('Send').'"/> &nbsp;
-                        <a href="privatemsg.php">'.T_('Cancel').'</a>
+                        <a class="sub1 secondary" href="privatemsg.php">'.T_('Cancel').'</a>
                     </p>
                 </fieldset>
             </form>

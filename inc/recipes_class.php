@@ -443,14 +443,14 @@ class Recipes
                     <div>
                         <label for="thumbnail">'.T_('Thumbnail').'</label>
                         <input type="file" name="thumbnail" id="thumbnail"/>
+                        &nbsp;&nbsp;<a class="sub1" href="?add=category">' . T_('New Category') . '</a>
                     </div>
                     <div>
                         <label for="category">'.T_('Category').'</label>
                         <select name="category" id="category">
                             <option></option>
                             ' . buildHtmlSelectOptions($categories, $category) . '
-                        </select>&nbsp;
-                        <a href="?add=category">' . T_('New Category') . '</a>
+                        </select>
                         <script type="text/javascript">
                             var fcategory = new LiveValidation(\'category\', { onlyOnSubmit: true });
                             fcategory.add(Validate.Presence, {failureMessage: ""});
@@ -458,7 +458,7 @@ class Recipes
                     </div>
                     <div>
                         <label for="ingredients">'.T_('Ingredients').'</label>
-                        <textarea name="ingredients" id="ingredients"></textarea>
+                        <textarea name="ingredients" id="ingredients" style="width: 100%; box-sizing: border-box;"></textarea>
                         <div id="ingredients-info" class="info">
                             '.T_('Put each ingredient on a seperate line.').'
                         </div>
@@ -469,7 +469,7 @@ class Recipes
                     </div>
                     <div>
                         <label for="directions">'.T_('Directions').'</label>
-                        <textarea name="directions" id="directions"></textarea>
+                        <textarea name="directions" id="directions" style="width: 100%; box-sizing: border-box;"></textarea>
                         <script type="text/javascript">
                             var fdirections = new LiveValidation(\'directions\', { onlyOnSubmit: true });
                             fdirections.add(Validate.Presence, {failureMessage: ""});
@@ -477,7 +477,7 @@ class Recipes
                     </div>
                     <p>
                         <input class="sub1" type="submit" name="submitadd" value="'.T_('Add').'"/> &nbsp;
-                        <a href="recipes.php">'.T_('Cancel').'</a>
+                        <a class="sub1 secondary" href="recipes.php">'.T_('Cancel').'</a>
                     </p>
                 </fieldset>
             </form>';
@@ -534,7 +534,7 @@ class Recipes
                     </div>
                     <div>
                         <label for="ingredients">'.T_('Ingredients').'</label>
-                        <textarea name="ingredients" id="ingredients">'.$ingredients.'</textarea>
+                        <textarea name="ingredients" id="ingredients" style="width: 100%; box-sizing: border-box;">'.$ingredients.'</textarea>
                         <script type="text/javascript">
                             var fingredients = new LiveValidation(\'ingredients\', { onlyOnSubmit: true });
                             fingredients.add(Validate.Presence, {failureMessage: ""});
@@ -542,7 +542,7 @@ class Recipes
                     </div>
                     <div>
                         <label for="directions">'.T_('Directions').'</label>
-                        <textarea name="directions" id="directions">'.$directions.'</textarea>
+                        <textarea name="directions" id="directions" style="width: 100%; box-sizing: border-box;">'.$directions.'</textarea>
                         <script type="text/javascript">
                             var fdirections = new LiveValidation(\'directions\', { onlyOnSubmit: true });
                             fdirections.add(Validate.Presence, {failureMessage: ""});
@@ -551,7 +551,7 @@ class Recipes
                     <p>
                         <input type="hidden" name="id" value="'.(int)$id.'"/>
                         <input class="sub1" type="submit" name="submitedit" value="' . T_('Edit') . '"/> &nbsp;
-                        <a href="recipes.php">' . T_('Cancel') . '</a>
+                        <a class="sub1 secondary" href="recipes.php">' . T_('Cancel') . '</a>
                     </p>
                 </fieldset>
             </form>';
@@ -579,7 +579,7 @@ class Recipes
                     </script>
                     <p>
                         <input class="sub1" type="submit" name="submit-category" value="' . T_('Create') . '"/> &nbsp;
-                        <a href="recipes.php?addrecipe=yes">' . T_('Cancel') . '</a>
+                        <a class="sub1 secondary" href="recipes.php?addrecipe=yes">' . T_('Cancel') . '</a>
                     </p>
                 </fieldset>
             </form>';

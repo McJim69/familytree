@@ -897,9 +897,8 @@ class MessageBoard
                     <p>
                         '.$sticky.'
                         <input type="hidden" name="thread" id="thread" value="'.$thread.'"/>
-                        <input class="sub1" type="submit" name="edit_admin_submit" id="edit_admin_submit" value="'.T_('Edit').'"/>
-                        '.T_('or').'
-                        <a href="messageboard.php?thread='.$thread.'">'.T_('Cancel').'</a>
+                        <input class="sub1" type="submit" name="edit_admin_submit" id="edit_admin_submit" value="'.T_('Edit').'"/> &nbsp;
+                        <a class="sub1 secondary" href="messageboard.php?thread='.$thread.'">'.T_('Cancel').'</a>
                     </p>
                 </fieldset>
             </form>';

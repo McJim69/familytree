@@ -361,9 +361,8 @@ class FamilyNews
                         <input type="hidden" name="user" value="'.(int)$user.'"/>
                         <input class="sub1" type="submit" name="submitedit" tabindex="3" value="'.T_('Edit').'"/>';
         }
-        echo '
-                         &nbsp;'.T_('or').' &nbsp;
-                        <a href="familynews.php">'.T_('Cancel').'</a>
+        echo ' &nbsp;
+                        <a class="sub1 secondary" href="familynews.php">'.T_('Cancel').'</a>
                     </p>
                 </fieldset>
             </form>';

@@ -958,9 +958,8 @@ td { padding: 0 0 30px 2px; width: 94px; border: 1px solid #000; vertical-align:
                     <textarea name="non-member-emails" id="non-member-emails" rows="10" cols="63"></textarea>
                     <p style="clear:both">
                         <input type="hidden" name="calendar" value="'.$calendarId.'"/>
-                        <input class="sub1" type="submit" id="submit-invite" name="submit-invite" value="'.T_('Send Invitations').'"/> 
-                        '.T_('or').'&nbsp;
-                        <a href="calendar.php">'.T_('Cancel').'</a>
+                        <input class="sub1" type="submit" id="submit-invite" name="submit-invite" value="'.T_('Send Invitations').'"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php">'.T_('Cancel').'</a>
                     </p>
                 </fieldset>
             </form>';

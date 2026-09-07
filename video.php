@@ -314,9 +314,8 @@ $(document).ready(function() {
                         <small>'.T_('"Unlisted" means that only people who know the link to the video can view it. The video will not appear in any of YouTube\'s public spaces, such as search results, your channel, or the Browse page, but the link can be shared with anyone.').'</small>
                     </div>
                 </div>
-                <input class="sub1" type="submit" id="upload_data" name="upload_data" value="'.T_('Next').'"/>
-                 &nbsp;'.T_('or').' &nbsp;
-                <a href="video.php">'.T_('Cancel').'</a>
+                <input class="sub1" type="submit" id="upload_data" name="upload_data" value="'.T_('Next').'"/> &nbsp;
+                <a class="sub1 secondary" href="video.php">'.T_('Cancel').'</a>
             </fieldset>
         </form>';
 

@@ -56,15 +56,13 @@
                     <p>
                         <input type="hidden" id="id" name="id" value="<?php echo $TMPL['id']; ?>"/> 
                         <input class="sub1" type="submit" id="editcat" name="editcat" value="<?php echo T_('Edit'); ?>"/> 
-                        <input class="sub2" type="submit" id="delcat" name="delcat" value="<?php echo T_('Delete'); ?>"/>
-                        <?php echo T_('or'); ?>&nbsp;
-                        <a href="calendar.php"><?php echo T_('Cancel'); ?></a>
+                        <input class="sub2" type="submit" id="delcat" name="delcat" value="<?php echo T_('Delete'); ?>"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php"><?php echo T_('Cancel'); ?></a>
                     </p>
                 <?php else: ?>
                     <p>
-                        <input class="sub1" type="submit" id="addcat" name="addcat" value="<?php echo T_('Add'); ?>"/>
-                        <?php echo T_('or'); ?>&nbsp;
-                        <a href="calendar.php"><?php echo T_('Cancel'); ?></a>
+                        <input class="sub1" type="submit" id="addcat" name="addcat" value="<?php echo T_('Add'); ?>"/> &nbsp;
+                        <a class="sub1 secondary" href="calendar.php"><?php echo T_('Cancel'); ?></a>
                     </p>
                 <?php endif; ?>
                 </fieldset>

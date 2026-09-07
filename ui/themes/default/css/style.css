@@ -4128,7 +4128,14 @@ fieldset #msg {
 #recipe-page #editform input {
   margin: 0 0 15px 0;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+}
+#recipe-page #addform input[type="file"],
+#recipe-page #editform input[type="file"] {
+  width: auto;
+  display: inline-block;
+  margin-right: 15px;
 }
 #recipe-page #addform .sub1,
 #recipe-page #editform .sub1 {
@@ -4139,12 +4146,14 @@ fieldset #msg {
   height: 140px;
   margin: 0 0 15px 0;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 #recipe-page #addform select,
 #recipe-page #editform select {
   margin: 0 0 15px 0;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 #recipe-page #addform .info {
@@ -6637,17 +6646,37 @@ textarea:disabled {
 }
 input[type="submit"],
 .sub1 {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   background-color: var(--primary-accent);
   color: #ffffff !important;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  padding: 10px 24px;
+  height: 42px;
+  line-height: 42px;
+  box-sizing: border-box;
+  min-width: 100px;
+  vertical-align: top;
+  padding: 0 24px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
   transition: all 0.2s ease;
   box-shadow: 0 2px 6px rgba(79, 70, 229, 0.2);
+}
+.sub1.secondary {
+  background-color: var(--text-muted);
+  box-shadow: none;
+}
+[data-theme="dark"] .sub1.secondary {
+  background-color: #334155; /* Dark gray for good contrast with white text */
+}
+input[type="submit"].sub1 {
+  line-height: normal;
 }
 input[type="submit"]:hover,
 .sub1:hover {

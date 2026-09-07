@@ -523,9 +523,8 @@ class AddressBook
 
         if ($cancel != '')
         {
-            echo '
-                        '.T_('or').' 
-                        <a href="'.$cancel.'">'.T_('Cancel').'</a>';
+            echo ' &nbsp;
+                        <a class="sub1 secondary" href="'.$cancel.'">'.T_('Cancel').'</a>';
         }
 
         print '
@@ -613,9 +612,8 @@ class AddressBook
                         <div class="field-widget"><input type="checkbox" name="private" id="private"/></div>
                     </div>
                     <p>
-                        <input class="sub1" type="submit" name="addsubmit" value="'.T_('Add').'"/> 
-                        '.T_('or').' 
-                        <a href="addressbook.php">'.T_('Cancel').'</a>
+                        <input class="sub1" type="submit" name="addsubmit" value="'.T_('Add').'"/> &nbsp;
+                        <a class="sub1 secondary" href="addressbook.php">'.T_('Cancel').'</a>
                     </p>
                 </fieldset>
                 '.$validator->getJsValidation($this->getProfile('add')).'
@@ -738,9 +736,8 @@ class AddressBook
         echo '
                     </div>
                     <p>
-                        <input class="sub1" type="submit" name="sendemailsubmit" value="'.T_('Send Email').'"/> 
-                        '.T_('or').'&nbsp; 
-                        <a href="addressbook.php">'.T_('Cancel').'</a>
+                        <input class="sub1" type="submit" name="sendemailsubmit" value="'.T_('Send Email').'"/> &nbsp;
+                        <a class="sub1 secondary" href="addressbook.php">'.T_('Cancel').'</a>
                     </p>
                 </field>
             </form>';
@@ -812,9 +809,8 @@ class AddressBook
 
                     <div style="display: flex; align-items: center; gap: 15px;">
                         <input type="submit" id="import" name="import" value="'.T_('Import').'" class="btn-primary" style="margin: 0;" />
-                        <span style="color: var(--text-muted, #94a3b8); font-size: 14px;">
-                            '.T_('or').' 
-                            <a href="addressbook.php" style="color: var(--text-main, #d8dee9); text-decoration: underline; margin-left: 5px;">'.T_('Cancel').'</a>
+                        <span style="margin-left: 10px;">
+                            <a class="sub1 secondary" href="addressbook.php">'.T_('Cancel').'</a>
                         </span>
                     </div>
                 </form>

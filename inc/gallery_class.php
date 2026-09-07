@@ -1923,8 +1923,8 @@ class PhotoGallery
                         <p>
                             '.$prev_tagged_options.'
                             <input type="hidden" name="photo_id" id="photo_id" value="'.$photo.'"/>
-                            <input class="sub1" type="submit" name="add_editphoto" value="'.T_('Edit').'"/> 
-                            '.T_('or').' <a href="index.php?'.$url.'">'.T_('Cancel').'</a>
+                            <input class="sub1" type="submit" name="add_editphoto" value="'.T_('Edit').'"/> &nbsp;
+                            <a class="sub1 secondary" href="index.php?'.$url.'">'.T_('Cancel').'</a>
                         </p>
                     </form>
                 </fieldset>';
@@ -2154,9 +2154,8 @@ class PhotoGallery
         echo '
                         <p>
                             '.$previouslyTaggedInputs.'
-                            <input class="sub1" type="submit" name="save-edit-category" id="save-edit-category" tabindex="'.$tabIndex.'" value="'.T_('Save').'"/> 
-                            '.T_('or').' 
-                            <a href="index.php?uid='.$user.'&amp;cid='.$category.'">'.T_('Cancel').'</a>
+                            <input class="sub1" type="submit" name="save-edit-category" id="save-edit-category" tabindex="'.$tabIndex.'" value="'.T_('Save').'"/> &nbsp;
+                            <a class="sub1 secondary" href="index.php?uid='.$user.'&amp;cid='.$category.'">'.T_('Cancel').'</a>
                         </p>
                     </fieldset>
                 </form>

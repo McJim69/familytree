@@ -139,12 +139,8 @@ class Page
             }
 
             echo '
-                </ul>
-                <div id="actions_menu">
-                    <ul>
-                        <li><a href="?addnews=yes" class="btn-primary">'.T_('Add News').'</a></li>
-                    </ul>
-                </div>
+					<li><a href="?addnews=yes" class="btn-primary">'.T_('Add News').'</a></li>
+				</ul>
             </div>';
         }
 

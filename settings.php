@@ -269,7 +269,6 @@ class Page
                     <h3>'.T_('General Settings').'</h3>
                     <ul class="menu sidebar-menu">
                         <li><a href="?view=account" class="'.($currentView == 'account' ? 'active' : '').'">👤 '.T_('Account').'</a></li>
-                        <li><a href="?view=theme" class="'.($currentView == 'theme' ? 'active' : '').'">🎨 '.T_('Theme').'</a></li>
                         <li><a href="?view=settings" class="'.($currentView == 'settings' ? 'active' : '').'">⚙️ '.T_('Settings').'</a></li>
                         <li><a href="?view=notifications" class="'.($currentView == 'notifications' ? 'active' : '').'">🔔 '.T_('Notifications').'</a></li>
                     </ul>
@@ -288,49 +287,7 @@ class Page
         $instagramConfig  = getInstagramConfigData();
         $youtubeConfig    = getYouTubeConfigData();
 
-        $facebookLink   = '';
-        $foursquareLink = '';
-        $instagramLink  = '';
-        $youtubeLink    = '';
-
-        if (!empty($facebookConfig['fb_app_id']) && !empty($facebookConfig['fb_secret']))
-        {
-            $facebookLink = '<li><a href="?view=facebook" class="'.($currentView == 'facebook' ? 'active' : '').'">📘 Facebook</a></li>';
-        }
-
-        if (!empty($foursquareConfig['fs_client_id']) && !empty($foursquareConfig['fs_client_secret']))
-        {
-            $foursquareLink = '<li><a href="?view=foursquare" class="'.($currentView == 'foursquare' ? 'active' : '').'">📍 Foursquare</a></li>';
-        }
-
-        if (!empty($instagramConfig['instagram_client_id']) && !empty($instagramConfig['instagram_client_secret']))
-        {
-            $instagramLink = '<li><a href="?view=instagram" class="'.($currentView == 'instagram' ? 'active' : '').'">📷 Instagram</a></li>';
-        }
-
-        if (!empty($youtubeConfig['youtube_key']))
-        {
-            $youtubeLink = '<li><a href="?view=youtube" class="'.($currentView == 'youtube' ? 'active' : '').'">🎬 YouTube</a></li>';
-        }
-
-        $picasaLink = '<li><a href="?view=picasa" class="'.($currentView == 'picasa' ? 'active' : '').'">🖼️ Picasa</a></li>';
-
-        $links = "$facebookLink$foursquareLink$instagramLink$youtubeLink$picasaLink";
-
-        if (!empty($links))
-        {
-            echo '
-                <div class="sidebar-block">
-                    <h3>'.T_('Social Media').'</h3>
-                    <ul class="menu sidebar-menu">
-                        '.$facebookLink.'
-                        '.$foursquareLink.'
-                        '.$instagramLink.'
-                        '.$youtubeLink.'
-                        '.$picasaLink.'
-                    </ul>
-                </div>';
-        }
+        // Removed Social Media card
 
         echo '
             </div>

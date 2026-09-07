@@ -1443,3 +1443,267 @@
     #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
 
  
+2026-09-06 22:04:27 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:28 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:28 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:28 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:28 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:28 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:30 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 22:04:40 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'youtube_session_token' in 'field list'
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [224]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT `youtube_session_token`
+                FROM `fcms_user_settings`
+                WHERE `user` = ?
+                AND `youtube_session_token` IS NOT NULL
+                AND `youtube_session_token` != ''
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\video.php:14]
+    #1 control called at [D:\Server\www\projects\familytree\video.php:36]
+    #2 displayYouTubeUploadPage called at [D:\Server\www\projects\familytree\video.php:80]
+    #3 checkUserAuthedYouTube called at [D:\Server\www\projects\familytree\video.php:243]
+    #4 getRow called at [D:\Server\www\projects\familytree\video.php:197]
+    #5 getRowPrepared called at [D:\Server\www\projects\familytree\inc\Database.php:150]
+    #6 add called at [D:\Server\www\projects\familytree\inc\Database.php:225]
+
+ 
+2026-09-06 23:41:30 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [285]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT p.`id`, p.`category`, p.`user`, p.`filename`, p.`external_id`, e.`thumbnail`
+                FROM `fcms_gallery_photos` AS p
+                LEFT JOIN `fcms_gallery_external_photo` AS e ON p.`external_id` = e.`id`
+                WHERE user = '1' 
+                ORDER BY `date` DESC 
+                LIMIT 5
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\profile.php:21]
+    #1 control called at [D:\Server\www\projects\familytree\profile.php:51]
+    #2 displayContributions called at [D:\Server\www\projects\familytree\profile.php:82]
+    #3 displayLatestPhotoGalleryPhotos called at [D:\Server\www\projects\familytree\profile.php:507]
+    #4 getRows called at [D:\Server\www\projects\familytree\profile.php:591]
+    #5 add called at [D:\Server\www\projects\familytree\inc\Database.php:286]
+
+ 
+2026-09-06 23:41:42 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [285]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT p.`id`, p.`category`, p.`user`, p.`filename`, p.`external_id`, e.`thumbnail`
+                FROM `fcms_gallery_photos` AS p
+                LEFT JOIN `fcms_gallery_external_photo` AS e ON p.`external_id` = e.`id`
+                WHERE user = '1' 
+                ORDER BY `date` DESC 
+                LIMIT 5
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\profile.php:21]
+    #1 control called at [D:\Server\www\projects\familytree\profile.php:51]
+    #2 displayContributions called at [D:\Server\www\projects\familytree\profile.php:82]
+    #3 displayLatestPhotoGalleryPhotos called at [D:\Server\www\projects\familytree\profile.php:507]
+    #4 getRows called at [D:\Server\www\projects\familytree\profile.php:591]
+    #5 add called at [D:\Server\www\projects\familytree\inc\Database.php:286]
+
+ 
+2026-09-06 23:41:45 - ERROR --> Cannot execute SQL statement. - Array
+(
+    [0] => HY093
+    [1] => 
+    [2] => 
+)
+
+  FILE  - D:\Server\www\projects\familytree\inc\Database.php [285]
+  PHP   - 8.0.13 (WINNT)
+  SQL   - SELECT p.`id`, p.`category`, p.`user`, p.`filename`, p.`external_id`, e.`thumbnail`
+                FROM `fcms_gallery_photos` AS p
+                LEFT JOIN `fcms_gallery_external_photo` AS e ON p.`external_id` = e.`id`
+                WHERE user = '1' 
+                ORDER BY `date` DESC 
+                LIMIT 5
+  STACK
+    #0 __construct called at [D:\Server\www\projects\familytree\profile.php:21]
+    #1 control called at [D:\Server\www\projects\familytree\profile.php:51]
+    #2 displayContributions called at [D:\Server\www\projects\familytree\profile.php:82]
+    #3 displayLatestPhotoGalleryPhotos called at [D:\Server\www\projects\familytree\profile.php:507]
+    #4 getRows called at [D:\Server\www\projects\familytree\profile.php:591]
+    #5 add called at [D:\Server\www\projects\familytree\inc\Database.php:286]
+
+ 

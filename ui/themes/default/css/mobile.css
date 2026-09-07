@@ -112,47 +112,7 @@
         -webkit-overflow-scrolling: touch;
     }
     
-    #sections_menu {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 12px !important;
-    }
-    
-    #sections_menu ul {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        width: 100% !important;
-    }
 
-    #sections_menu li {
-        width: 100% !important;
-    }
-
-    #sections_menu li a {
-        width: 100% !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-    }
-
-    #actions_menu {
-        width: 100% !important;
-        margin-left: 0 !important;
-    }
-
-    #actions_menu ul {
-        width: 100% !important;
-        flex-direction: column !important;
-    }
-
-    #actions_menu li {
-        width: 100% !important;
-    }
-
-    #actions_menu a.btn-primary {
-        width: 100% !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-    }
 
     .mb-search-group {
         flex-direction: column !important;
@@ -293,5 +253,35 @@
 
     #big-calendar .weekDays {
         font-size: 9px !important;
+    }
+}
+
+/* Small phone screens — stack sections_menu vertically */
+@media only screen and (max-width: 600px) {
+    #sections_menu {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    #sections_menu ul {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    #sections_menu li {
+        width: 100% !important;
+    }
+
+    #sections_menu li a {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    #actions_menu {
+        width: 100% !important;
+        margin-left: 0 !important;
     }
 }

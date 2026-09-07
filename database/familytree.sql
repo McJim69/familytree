@@ -849,6 +849,7 @@ CREATE TABLE IF NOT EXISTS `fcms_user_settings` (
   `wordpress` varchar(255) DEFAULT NULL,
   `posterous` varchar(255) DEFAULT NULL,
   `fb_access_token` varchar(255) DEFAULT NULL,
+  `youtube_session_token` varchar(255) DEFAULT NULL,
   `google_session_token` varchar(255) DEFAULT NULL,
   `instagram_access_token` varchar(255) DEFAULT NULL,
   `instagram_auto_upload` tinyint(1) DEFAULT '0',
@@ -862,8 +863,8 @@ CREATE TABLE IF NOT EXISTS `fcms_user_settings` (
 -- Dumping data for table `fcms_user_settings`
 --
 
-INSERT INTO `fcms_user_settings` (`id`, `user`, `theme`, `boardsort`, `displayname`, `frontpage`, `timezone`, `dst`, `email_updates`, `uploader`, `advanced_tagging`, `language`, `fs_user_id`, `fs_access_token`, `blogger`, `tumblr`, `wordpress`, `posterous`, `fb_access_token`, `google_session_token`, `instagram_access_token`, `instagram_auto_upload`, `picasa_session_token`, `fb_user_id`) VALUES
-(1, 1, 'default', 'ASC', '1', '1', '-5 hours', 0, 0, 'plupload', 1, 'en_US', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL);
+INSERT INTO `fcms_user_settings` (`id`, `user`, `theme`, `boardsort`, `displayname`, `frontpage`, `timezone`, `dst`, `email_updates`, `uploader`, `advanced_tagging`, `language`, `fs_user_id`, `fs_access_token`, `blogger`, `tumblr`, `wordpress`, `posterous`, `fb_access_token`, `youtube_session_token`, `google_session_token`, `instagram_access_token`, `instagram_auto_upload`, `picasa_session_token`, `fb_user_id`) VALUES
+(1, 1, 'default', 'ASC', '1', '1', '-5 hours', 0, 0, 'plupload', 1, 'en_US', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 

@@ -141,7 +141,7 @@ class Page
                     </script>
                     <div>
                         <textarea name="desc" id="desc" rows="10" cols="63" tabindex="2"></textarea>
-                    </div>
+                    </div><br>
                     <script type="text/javascript">
                         var fdesc = new LiveValidation(\'desc\', { onlyOnSubmit: "" });
                         fdesc.add(Validate.Presence, {failureMessage: ""});

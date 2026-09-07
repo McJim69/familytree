@@ -112,10 +112,8 @@ class Page
                 <ul>
                     <li><a href="privatemsg.php" '.$inboxActive.'>'.$link.'</a></li>
                     <li><a href="privatemsg.php?folder=sent" '.$sentActive.'>'.T_('Sent').'</a></li>
+					<li><a href="?compose=new" class="btn-primary">'.T_('New Message').'</a></li>
                 </ul>
-                <div id="actions_menu">
-                    <ul><li><a href="?compose=new" class="btn-primary">'.T_('New Message').'</a></li></ul>
-                </div>
             </div>
 
             <div id="maincolumn" class="full-width-column">';

@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="<?php echo $TMPL['path']; ?>ui/favicon.png"/>
-<link rel="stylesheet" type="text/css" href="<?php echo $TMPL['path']; ?>ui/themes/default/css/style.css?version=460"/>
-<link rel="stylesheet" type="text/css" href="<?php echo $TMPL['path']; ?>ui/themes/default/css/mobile.css?version=460"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $TMPL['path']; ?>ui/themes/default/css/style.css?version=480"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $TMPL['path']; ?>ui/themes/default/css/mobile.css?version=462"/>
 <script type="text/javascript" src="<?php echo $TMPL['path']; ?>ui/js/jquery.js?version=350"></script>
 <script type="text/javascript" src="<?php echo $TMPL['path']; ?>ui/js/fcms.js?version=350"></script>
 <?php if (isset($TMPL['javascript'])) { echo $TMPL['javascript']; } ?>

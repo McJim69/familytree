@@ -50,7 +50,9 @@ class Profile
                     <li><a href="?view=address">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
                 <div id="actions_menu">
-                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                    <ul>
+                        <li><a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a></li>
+                    </ul>
                 </div>
             </div>
             <div id="maincolumn" class="full-width-column">
@@ -144,7 +146,9 @@ class Profile
                     <li><a href="?view=address">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
                 <div id="actions_menu">
-                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                    <ul>
+                        <li><a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a></li>
+                    </ul>
                 </div>
             </div>
             <div id="maincolumn" class="full-width-column">
@@ -250,7 +254,9 @@ class Profile
                     <li><a href="?view=address">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
                 <div id="actions_menu">
-                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                    <ul>
+                        <li><a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a></li>
+                    </ul>
                 </div>
             </div>
             <div id="maincolumn" class="full-width-column">';
@@ -296,7 +302,9 @@ class Profile
                     <li><a href="?view=address" class="active">📇 '.T_('Address / Contact').'</a></li>
                 </ul>
                 <div id="actions_menu">
-                    <a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a>
+                    <ul>
+                        <li><a class="btn-profile-action" href="?member='.$this->fcmsUser->id.'">👁️ '.T_('View Profile').'</a></li>
+                    </ul>
                 </div>
             </div>
             <div id="maincolumn" class="full-width-column">';

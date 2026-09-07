@@ -797,19 +797,28 @@ class AddressBook
     function displayImportForm ()
     {
         echo '
-            <h2>'.T_('Import').'</h2><br/>
-            <form method="post" name="csv-form" action="addressbook.php?csv=import" enctype="multipart/form-data" >
-                <div><input type="file" name="csv" id="csv" /></div>
-                <p>
-                    <label for="private">'.T_('Private').'</label> &nbsp;
-                    <input type="checkbox" name="private" id="private"/>
-                </p>
-                <p>
-                    <input type="submit" id="import" name="import" value="'.T_('Import').'"/> 
-                    '.T_('or').' 
-                    <a href="addressbook.php">'.T_('Cancel').'</a>
-                </p>
-            </form>';
+            <div style="background-color: var(--bg-card, #2a2e3d); border: 1px solid var(--border-color, #3b4252); border-radius: 12px; padding: 25px; margin-bottom: 25px;">
+                <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.25rem; font-weight: 600; color: var(--text-main, #d8dee9);">'.T_('Import Contacts').'</h3>
+                <form method="post" name="csv-form" action="addressbook.php?csv=import" enctype="multipart/form-data">
+                    <div style="margin-bottom: 20px;">
+                        <label for="csv" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; color: var(--text-muted, #94a3b8);">'.T_('CSV File').'</label>
+                        <input type="file" name="csv" id="csv" style="display: block; width: 100%; padding: 10px; background-color: var(--bg-dark, #1e212b); border: 1px solid var(--border-color, #3b4252); border-radius: 8px; color: var(--text-main, #d8dee9);" />
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px;">
+                        <input type="checkbox" name="private" id="private" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--primary-accent, #4f46e5);" />
+                        <label for="private" style="margin: 0; cursor: pointer; font-size: 14px;">'.T_('Mark imported contacts as Private').'</label>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <input type="submit" id="import" name="import" value="'.T_('Import').'" class="btn-primary" style="margin: 0;" />
+                        <span style="color: var(--text-muted, #94a3b8); font-size: 14px;">
+                            '.T_('or').' 
+                            <a href="addressbook.php" style="color: var(--text-main, #d8dee9); text-decoration: underline; margin-left: 5px;">'.T_('Cancel').'</a>
+                        </span>
+                    </div>
+                </form>
+            </div>';
     }
 
     /**

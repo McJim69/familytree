@@ -414,3 +414,100 @@ body.ajax-chat {
   background-color: var(--chat-border);
   border-radius: 3px;
 }
+
+/* Responsive Layout & Mobile Viewport Breakpoints */
+@media (max-width: 768px) {
+  #content #headline {
+    font-size: 16px !important;
+    top: 12px !important;
+    left: 12px !important;
+  }
+
+  #content #logoutChannelContainer {
+    top: 10px !important;
+    right: 12px !important;
+    gap: 6px !important;
+  }
+
+  #content #logoutChannelContainer select {
+    max-width: 110px !important;
+    font-size: 11px !important;
+    padding: 2px 4px !important;
+  }
+
+  #content #logoutButton {
+    padding: 4px 10px !important;
+    font-size: 12px !important;
+  }
+
+  #content #mainPanelContainer {
+    top: 50px !important;
+    bottom: 110px !important;
+    left: 10px !important;
+    right: 10px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  #content #chatList {
+    flex: 1 !important;
+    height: 100% !important;
+  }
+
+  #content #onlineListContainer,
+  #content #helpContainer,
+  #content #settingsContainer {
+    position: relative !important;
+    width: 100% !important;
+    max-height: 120px !important;
+  }
+
+  #content #inputFieldContainer {
+    left: 10px !important;
+    right: 100px !important;
+    bottom: 50px !important;
+    height: 40px !important;
+  }
+
+  #content #inputFieldContainer #inputField {
+    height: 40px !important;
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+  }
+
+  #content #submitButtonContainer {
+    right: 10px !important;
+    bottom: 50px !important;
+    height: 40px !important;
+  }
+
+  #content #submitButton {
+    height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 13px !important;
+  }
+
+  #content #bbCodeContainer {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #content #logoutChannelInner label {
+    display: none !important;
+  }
+  
+  #content #inputFieldContainer {
+    right: 75px !important;
+  }
+
+  #content #submitButton {
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+}

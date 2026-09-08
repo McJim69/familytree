@@ -33,13 +33,13 @@ Family members can interact through posts, media sharing, and collaborative tool
 ---
 
 ## 🛠 Tech Stack
-- PHP  
-- HTML / CSS  
-- Apache  
-- jQuery & JavaScript  
-- MySQL Database  
-- Bootstrap Framework  
-- Custom CSS  
+- HTML 33.4%
+- PHP 30.5%
+- JavaScript 25.9%
+- CSS 6.2%
+- Less 3.4%
+- ActionScript 0.4%
+- Other 0.2%
 
 ---
 

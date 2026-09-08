@@ -69,7 +69,7 @@ $config['sourceEncoding'] = 'UTF-8';
 $config['contentType'] = null;
 
 // Session name used to identify the session cookie:
-$config['sessionName'] = 'login_id';
+$config['sessionName'] = session_name() ? session_name() : 'PHPSESSID';
 // Prefix added to every session key:
 $config['sessionKeyPrefix'] = 'ajaxChat';
 // The lifetime of the language, style and setting cookies in days:

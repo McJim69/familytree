@@ -12,36 +12,40 @@ class CustomAJAXChat extends AJAXChat {
 	// Returns an associative array containing userName, userID and userRole
 	// Returns null if login is invalid
 	function getValidLoginUserData() {
-		
-        if (!isset($_SESSION['fcms_id']))
-        {
-            return null;
-        }
+		if (session_status() === PHP_SESSION_NONE) {
+			session_start();
+		}
 
-        $currentUserId = (int)$_SESSION['fcms_id'];
-        $displayName   = $this->getUserDisplayName($currentUserId);
-        $currentAccess = $this->checkAccess($currentUserId);
+		if (!isset($_SESSION['fcms_id']) && isset($_COOKIE['fcms_cookie_id'])) {
+			$_SESSION['fcms_id'] = (int)$_COOKIE['fcms_cookie_id'];
+			if (isset($_COOKIE['fcms_cookie_token'])) {
+				$_SESSION['fcms_token'] = $_COOKIE['fcms_cookie_token'];
+			}
+		}
 
-        if ($currentAccess == 1)
-        {
-            $role = AJAX_CHAT_ADMIN;
-        }
-        elseif ($currentAccess == 2)
-        {
-            $role = AJAX_CHAT_MODERATOR;
-        }
-        else
-        {
-            $role = AJAX_CHAT_USER;
-        }
+		if (!isset($_SESSION['fcms_id']) || (int)$_SESSION['fcms_id'] <= 0) {
+			return null;
+		}
 
-        $userData = array(
-            'userID'    => $currentUserId,
-            'userName'  => $displayName,
-            'userRole'  => $role
-        );
+		$currentUserId = (int)$_SESSION['fcms_id'];
+		$displayName   = $this->getUserDisplayName($currentUserId);
+		$currentAccess = $this->checkAccess($currentUserId);
 
-        return $userData;
+		if ($currentAccess == 1) {
+			$role = AJAX_CHAT_ADMIN;
+		} elseif ($currentAccess == 2) {
+			$role = AJAX_CHAT_MODERATOR;
+		} else {
+			$role = AJAX_CHAT_USER;
+		}
+
+		$userData = array(
+			'userID'    => $currentUserId,
+			'userName'  => $displayName,
+			'userRole'  => $role
+		);
+
+		return $userData;
 	}
 
 	// Store the channels the current user has access to
